@@ -1,0 +1,55 @@
+/*
+
+E-learning website
+
+--bootstrap 5
+--bootstrap icons
+--css color scheme
+
+*/
+
+
+/* ============ Color Scheme =========== */
+
+:root {
+  /* Primary Colors */
+  --primary-color: #2A73E8; /* Blue for buttons, headers */
+  --primary-hover-color: #1C5ACB; /* Darker blue for hover effects */
+
+  /* Secondary Colors */
+  --secondary-color: #FFBC42; /* Yellow for accents or highlights */
+  --secondary-hover-color: #E5A32F; /* Darker yellow for hover effects */
+
+  /* General Backgrounds */
+  --background-color: #F4F7FA; /* Light gray for general background */
+  --card-background: #FFFFFF; /* White for cards or content blocks */
+  --header-background: #1A1A2E; /* Dark navy for headers or navigation bar */
+
+  /* Page-Specific Background Colors */
+  --home-page-bg: #F0F2F5; /* Light grayish blue for home page */
+  --dashboard-page-bg: #E9ECEF; /* Slightly darker gray for admin/teacher/student dashboards */
+  --course-page-bg: #FAFBFC; /* Soft white for course pages */
+  --profile-page-bg: #EFF1F5; /* Light gray for profile/account settings pages */
+  --login-page-bg: #FFFFFF; /* Clean white for login/register pages */
+  --error-page-bg: #F8D7DA; /* Light red for error pages (404, etc.) */
+
+  /* Text Colors */
+  --text-color: #333333; /* Dark gray for body text */
+  --text-light-color: #6C757D; /* Lighter gray for subtitles, descriptions */
+  --text-header-color: #FFFFFF; /* White for text in header/navigation */
+
+  /* Borders */
+  --border-color: #E0E0E0; /* Light gray for borders and dividers */
+
+  /* Alerts/Status */
+  --success-color: #28A745; /* Green for success messages */
+  --warning-color: #FFC107; /* Yellow for warnings */
+  --error-color: #DC3545; /* Red for errors */
+
+  /* Shadows */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+}
+
+.slider{
+  background-color: var(--background-color);
+}

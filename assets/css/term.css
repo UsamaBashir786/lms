@@ -1,0 +1,12 @@
+.terms-container {
+  max-width: 900px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+/* p{
+  text-align: justify;
+} */
