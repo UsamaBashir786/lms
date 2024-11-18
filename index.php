@@ -10,9 +10,17 @@
   <!-- Bootstrap CSS link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Bootstrap Icons link -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- MDBootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDBootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+
+
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -51,7 +59,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 d-flex justify-content-center">
-          <h1 class="mb-5"><span>Why</span> Interactive E-Tutor?</h1>
+          <h1 class="mb-5"><b><span>Why</span> Interactive E-Tutor?</b></h1>
         </div>
         <div class="col-md-6">
           <h1>"Everything You Can Do in a Classroom, You Can Do with TOTC"</h1>
@@ -70,171 +78,133 @@
     </div>
   </div>
 
-  <!-- Courses  -->
+  <!-- Courses -->
   <div class="course py-5">
     <div class="container">
-      <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="col-md-12">
-          <h1 class="text-center ">Courses</h1>
-        </div>
-        <div class="col-md-12 d-flex justify-content-center py-3">
-          <button class="me-3 text-white border-0"> All</button>
-          <button class="me-3 text-white border-0"> HTML</button>
-          <button class="me-3 text-white border-0"> CSS</button>
-          <button class="me-3 text-white border-0"> PHP</button>
-          <button class="me-3 text-white border-0"> Bootstrap</button>
-          <button class="me-3 text-white border-0"> XML</button>
-          <button class="me-3 text-white border-0"> Java</button>
-          <button class="me-3 text-white border-0"> JS</button>
-        </div>
-        <div class="carousel-inner mb-4">
-          <div class="carousel-item active">
-            <div class="row">
-              <!-- Card 1 -->
-              <div class="col-md-4 mt-5">
-                <div class="card border-0 bg-transparent" style="width: 100%;">
-                  <img src="assets/images/html" alt="HTML">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">HTML Basics</h5>
-                    <p class="card-text">By John Doe</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $10</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <h1 class="text-center mb-5"><b>Courses</b></h1>
+      <div class="custom-class">
+        <a href="#" class="btn filter-btn active me-2" data-filter="all">All</a>
+        <a href="#" class="btn filter-btn" data-filter="html">HTML</a>
+        <a href="#" class="btn filter-btn" data-filter="css">CSS</a>
+        <a href="#" class="btn filter-btn" data-filter="javascript">JAVASCRIPT</a>
+        <a href="#" class="btn filter-btn" data-filter="bootstrap">BOOTSTRAP</a>
+        <a href="#" class="btn filter-btn" data-filter="php">PHP</a>
+        <a href="#" class="btn filter-btn" data-filter="java">JAVA</a>
+      </div>
 
-              <!-- Card 2 -->
-              <div class="col-md-4 mt-5">
-                <div class="card border-0 bg-transparent" style="width: 100%;">
-                  <img class="card-img-top" src="assets/images/css" alt="CSS">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">CSS Mastery</h5>
-                    <p class="card-text">By Jane Smith</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $15</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="col-md-4 mt-5">
-                <div class="card border-0 bg-transparent" style="width: 100%;">
-                  <img class="card-img-top" src="assets/images/php" alt="Bootstrap">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Bootstrap 5</h5>
-                    <p class="card-text">By Alex Johnson</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $20</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Second carousel item -->
-          <div class="carousel-item">
-            <div class="row">
-              <!-- Card 4 -->
-              <div class="col-md-4 mt-5">
-                <div class="card border-0 bg-transparent" style="width: 100%;">
-                  <img class="card-img-top" src="assets/images/php" alt="JavaScript">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">JavaScript Essentials</h5>
-                    <p class="card-text">By Emily Davis</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $25</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 5 -->
-              <div class="col-md-4 mt-5">
-                <div class="card border-0 bg-transparent" style="width: 100%;">
-                  <img class="card-img-top" src="assets/images/java" alt="Java">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Java Programming</h5>
-                    <p class="card-text">By Michael Brown</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $30</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 6 -->
-              <div class="col-md-4 mt-5">
-                <div class="card border-0 bg-transparent" style="width: 100%;">
-                  <img class="card-img-top" src="assets/images/php" alt="PHP">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">PHP Development</h5>
-                    <p class="card-text">By Sarah Lee</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $35</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <!-- Course Images -->
+      <div class="row d-flex mt-5">
+        <div class="col-lg-2" data-category="bootstrap">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/bootstrap.png" alt="bootstrap" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>Bootstrap</b></p>
+              <a href="#" class="button border-0 px-4 py-2">20$</a>
             </div>
           </div>
         </div>
+        <div class="col-lg-2" data-category="javascript">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/java-script.png" alt="java-script" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>Javascript</b></p>
+              <a href="#" class="button border-0 px-4 py-2">30$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="php">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/phplogo.png" alt="phplogo" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>PHP</b></p>
+              <a href="#" class="button border-0 px-4 py-2">50$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="java">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/javalogo.png" alt="javalogo" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>Java</b></p>
+              <a href="#" class="button border-0 px-4 py-2">40$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="html">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/htmllogo.png" alt="htmllogo" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>HTML</b></p>
+              <a href="#" class="button border-0 px-4 py-2">35$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="css">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/css-3.png" alt="css-3" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>CSS</b></p>
+              <a href="#" class="button border-0 px-4 py-2">20$</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev"
-          style="display:none;">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next"
-          style="display:none;">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+      <div class="row d-flex mt-5">
+        <div class="col-lg-2" data-category="java">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/javalogo.png" alt="javalogo" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>Java</b></p>
+              <a href="#" class="button border-0 px-4 py-2">40$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="php">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/phplogo.png" alt="phplogo" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>PHP</b></p>
+              <a href="#" class="button border-0 px-4 py-2">50$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="javascript">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/java-script.png" alt="java-script" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>Javascript</b></p>
+              <a href="#" class="button border-0 px-4 py-2">30$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="css">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/css-3.png" alt="css-3" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>CSS</b></p>
+              <a href="#" class="button border-0 px-4 py-2">20$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="html">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/htmllogo.png" alt="htmllogo" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>HTML</b></p>
+              <a href="#" class="button border-0 px-4 py-2">35$</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2" data-category="java">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <img src="assets/images/javalogo.png" alt="javalogo" class="img-fluid equal-height">
+              <p class="fs-5 py-3 text-center"><b>Java</b></p>
+              <a href="#" class="button border-0 px-4 py-2">40$</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -243,13 +213,11 @@
   <div class="feature py-5">
     <div class="container">
       <div class="row">
-        <!-- Center the text horizontally and vertically -->
         <div class="col-md-12 py-2 d-flex justify-content-center align-items-center">
-          <h1 class="me-2 text-center color-F48C06">Our</h1>
-          <h1 class="color-252641">Features</h1>
+          <h1 class="me-2 text-center"><b><span>Our </span>Features</b></h1>
         </div>
         <div class="text-center">
-          <p class="color-666">This very extraordinary feature, can make learning activities more efficient</p>
+          <p>This very extraordinary feature, can make learning activities more efficient</p>
         </div>
       </div>
       <div class="row mb-5">
@@ -257,28 +225,21 @@
           <a href="#"><img src="assets/images/video" alt="" height="300px" class="ms-5 mt-4"></a>
         </div>
         <div class="col-md-6 py-5">
-          <div class="">
-            <h1> Interactive Video Streaming</h1>
-          </div>
-          <div class="">
-            <p class="color-666">Engage students with video lessons that pause for quizzes to reinforce learning. If
-              they pass, the video
-              continues; if not, it replays, ensuring active understanding.</p>
-          </div>
+          <h1> Interactive Video Streaming</h1>
+          <p>Engage students with video lessons that pause for quizzes to reinforce learning. If
+            they pass, the video
+            continues; if not, it replays, ensuring active understanding.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="more-feature py-5 ">
+  <div class="tool py-5 ">
     <div class="container mt-4">
       <div class="row">
         <div class="col-md-6 py-5">
-          <div>
-            <h1 class="color-F48C06">Assessment & Interactive </h1>
-            <h1>Learning Tools</h1>
-          </div>
-          <p class="color-666">Empower teachers to assign quizzes, homework, and host live Zoom classes for real-time
+          <h1><span>Assessment</span> & Interactive Learning Tools</h1>
+          <p class="mt-4">Empower teachers to assign quizzes, homework, and host live Zoom classes for real-time
             interaction,
             ensuring students are consistently engaged, evaluated, and supported throughout their learning journey</p>
         </div>
@@ -292,43 +253,228 @@
   <!-- review -->
   <div class="testimonial py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center color-49BBBD mb-3">Testimonial</h1>
+      <h1 class="text-center"><b>Testimonials</b></h1>
+      <!-- Carousel wrapper -->
+      <div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+        <!-- Controls -->
+        <div class="d-flex justify-content-center mb-4">
+          <div class="d-flex justify-content-center mb-4">
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+              <i class="fas fa-chevron-left arrow" aria-hidden="true"></i> <!-- Font Awesome Icon -->
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+              <i class="fas fa-chevron-right arrow" aria-hidden="true"></i> <!-- Font Awesome Icon -->
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-        <div class="text-center mb-4">
-          <p>Some quick example text to build on the card title and make up the bulk of the card's</p>
-        </div>
+        <!-- Inner -->
+        <div class="carousel-inner py-4">
+          <!-- Single item -->
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">Anna Deynah</h5>
+                  <p>UX Designer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+                    officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                  </ul>
+                </div>
 
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <div class="d-flex">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <h5 class="card-title">Card title</h5>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">John Doe</h5>
+                  <p>Web Developer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                    suscipit laboriosam, nisi ut aliquid commodi.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li>
+                      <i class="fas fa-star-half-alt fa-sm"></i>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">Maria Kate</h5>
+                  <p>Photographer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium voluptatum deleniti atque corrupti.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="far fa-star fa-sm"></i></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <h5 class="card-title">Card title</h5>
-              <img class="card-img-top" src="..." alt="Card image cap">
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(3).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">John Doe</h5>
+                  <p>UX Designer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+                    officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">Alex Rey</h5>
+                  <p>Web Developer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                    suscipit laboriosam, nisi ut aliquid commodi.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li>
+                      <i class="fas fa-star-half-alt fa-sm"></i>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">Maria Kate</h5>
+                  <p>Photographer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium voluptatum deleniti atque corrupti.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="far fa-star fa-sm"></i></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <h5 class="card-title">Card title</h5>
-              <img class="card-img-top" src="..." alt="Card image cap">
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(6).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">Anna Deynah</h5>
+                  <p>UX Designer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+                    officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">John Doe</h5>
+                  <p>Web Developer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                    suscipit laboriosam, nisi ut aliquid commodi.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li>
+                      <i class="fas fa-star-half-alt fa-sm"></i>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar"
+                    style="width: 150px;" />
+                  <h5 class="mb-3">Maria Kate</h5>
+                  <p>Photographer</p>
+                  <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium voluptatum deleniti atque corrupti.
+                  </p>
+                  <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="fas fa-star fa-sm"></i></li>
+                    <li><i class="far fa-star fa-sm"></i></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -337,139 +483,157 @@
   </div>
 
   <!-- Famous Categories -->
-  <div class="famous-categorie py-5">
+  <div class="categorie py-5">
     <div class="container">
-      <h1 class="text-center color-49BBBD mb-5">Famous Categories</h1>
-      <div class="owl-carousel">
-        <div>
-          <div class="card bg-transparent">
-            <img class="card-img-top" src="assets/images/html" alt="HTML">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">HTML Basics</h5>
-              <p class="card-text">By John Doe</p>
-              <span class="mb-3">
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-              </span>
-              <div class="mt-auto">
-                <a href="#" class="btn-n text-decoration-none text-white">Price: $10</a>
+      <h1 class="text-center"><b><span>Famous</span> Categories</b></h1>
+
+      <div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+        <!-- Controls -->
+        <div class="d-flex justify-content-center mb-4">
+          <div class="d-flex justify-content-center mb-4">
+            <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+              <i class="fas fa-chevron-left arrow" aria-hidden="true"></i> <!-- Font Awesome Icon -->
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+              <i class="fas fa-chevron-right arrow" aria-hidden="true"></i> <!-- Font Awesome Icon -->
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Inner -->
+        <div class="carousel-inner py-4">
+          <!-- Single item -->
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card bg-transparent mx-2">
+                    <img class="card-img-top" src="assets/images/html" alt="HTML">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">HTML Basics</h5>
+                      <p class="card-text">By John Doe</p>
+                      <span class="mb-3">
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                      </span>
+                      <div class="mt-auto">
+                        <a href="#" class="custom-btn text-decoration-none text-white">Price: $10</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="card bg-transparent mx-2">
+                    <img class="card-img-top" src="assets/images/html" alt="HTML">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">HTML Basics</h5>
+                      <p class="card-text">By John Doe</p>
+                      <span class="mb-3">
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                      </span>
+                      <div class="mt-auto">
+                        <a href="#" class="custom-btn text-decoration-none text-white">Price: $10</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="card bg-transparent mx-2">
+                    <img class="card-img-top" src="assets/images/html" alt="HTML">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">HTML Basics</h5>
+                      <p class="card-text">By John Doe</p>
+                      <span class="mb-3">
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                      </span>
+                      <div class="mt-auto">
+                        <a href="#" class="custom-btn text-decoration-none text-white">Price: $10</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div class="card bg-transparent">
-            <img class="card-img-top" src="assets/images/html" alt="HTML">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">HTML Basics</h5>
-              <p class="card-text">By John Doe</p>
-              <span class="mb-3">
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-              </span>
-              <div class="mt-auto">
-                <a href="#" class="btn-n text-decoration-none text-white">Price: $10</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="card bg-transparent">
-            <img class="card-img-top" src="assets/images/html" alt="HTML">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">HTML Basics</h5>
-              <p class="card-text">By John Doe</p>
-              <span class="mb-3">
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-              </span>
-              <div class="mt-auto">
-                <a href="#" class="btn-n text-decoration-none text-white">Price: $10</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="card bg-transparent">
-            <img class="card-img-top" src="assets/images/html" alt="HTML">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">HTML Basics</h5>
-              <p class="card-text">By John Doe</p>
-              <span class="mb-3">
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-              </span>
-              <div class="mt-auto">
-                <a href="#" class="btn-n text-decoration-none text-white">Price: $10</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="card bg-transparent">
-            <img class="card-img-top" src="assets/images/html" alt="HTML">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">HTML Basics</h5>
-              <p class="card-text">By John Doe</p>
-              <span class="mb-3">
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-              </span>
-              <div class="mt-auto">
-                <a href="#" class="btn-n text-decoration-none text-white">Price: $10</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="card bg-transparent">
-            <img class="card-img-top" src="assets/images/html" alt="HTML">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">HTML Basics</h5>
-              <p class="card-text">By John Doe</p>
-              <span class="mb-3">
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-              </span>
-              <div class="mt-auto">
-                <a href="#" class="btn-n text-decoration-none text-white">Price: $10</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="card bg-transparent">
-            <img class="card-img-top" src="assets/images/html" alt="HTML">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">HTML Basics</h5>
-              <p class="card-text">By John Doe</p>
-              <span class="mb-3">
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-                <i class="bi bi-star-fill" style="color: gold;"></i>
-              </span>
-              <div class="mt-auto">
-                <a href="#" class="btn-n text-decoration-none text-white">Price: $10</a>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card bg-transparent mx-2">
+                    <img class="card-img-top" src="assets/images/html" alt="HTML">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">HTML Basics</h5>
+                      <p class="card-text">By John Doe</p>
+                      <span class="mb-3">
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                      </span>
+                      <div class="mt-auto">
+                        <a href="#" class="custom-btn text-decoration-none text-white">Price: $10</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="card bg-transparent mx-2">
+                    <img class="card-img-top" src="assets/images/html" alt="HTML">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">HTML Basics</h5>
+                      <p class="card-text">By John Doe</p>
+                      <span class="mb-3">
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                      </span>
+                      <div class="mt-auto">
+                        <a href="#" class="custom-btn text-decoration-none text-white">Price: $10</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="card bg-transparent mx-2">
+                    <img class="card-img-top" src="assets/images/html" alt="HTML">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">HTML Basics</h5>
+                      <p class="card-text">By John Doe</p>
+                      <span class="mb-3">
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                        <i class="bi bi-star-fill" style="color: gold;"></i>
+                      </span>
+                      <div class="mt-auto">
+                        <a href="#" class="custom-btn text-decoration-none text-white">Price: $10</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -478,48 +642,49 @@
     </div>
   </div>
 
-  <!-- become a teacher -->
-  <div class="become-teacher-section py-5">
-    <div class="container text-center">
-      <h2 class="mb-4 fw-bold">Become a Teacher</h2>
-      <p class="lead">Share Your Knowledge, Inspire the Future</p>
-      <p class="color-666 mb-5">
+
+  <!-- Become a teacher -->
+  <div class="teacher py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center"><b><span>Become</span> a Teacher</b></h2>
+      <h5 class="text-center mb-2">Share Your Knowledge, Inspire the Future</h5>
+      <p class="text-center mb-5">
         Join our community of educators and start making an impact by sharing your expertise.
         Whether you’re a professional in coding, design, or any field, TOTC makes it easy
         for you to create and manage courses, reach eager learners, and earn from your passion.
       </p>
 
       <!-- Why Teach with Us? -->
-      <div class="row justify-content-center">
-        <div class="col-md-3 ">
-          <div class="card bg-transparent border-0">
-            <div class="card-body ">
-              <h5 class="card-title fw-bold">Flexible Schedule</h5>
-              <p class="card-text color-666">Teach anytime, anywhere.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ">
+      <div class="row">
+        <div class="col-md-3">
           <div class="card bg-transparent border-0">
             <div class="card-body">
-              <h5 class="card-title fw-bold">Earn Extra Income</h5>
-              <p class="card-text color-666">Get paid for every enrollment.</p>
+              <h5 class="card-title"><b>Flexible Schedule</b></h5>
+              <p>Teach anytime, anywhere.</p>
             </div>
           </div>
         </div>
         <div class="col-md-3">
           <div class="card bg-transparent border-0">
             <div class="card-body">
-              <h5 class="card-title fw-bold">Global Reach</h5>
-              <p class="card-text color-666">Connect with students worldwide.</p>
+              <h5 class="card-title"><b>Earn Extra Income</b></h5>
+              <p>Get paid for every enrollment.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-3 ">
+        <div class="col-md-3">
           <div class="card bg-transparent border-0">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Simple Tools</h5>
-              <p class="card-text color-666">Course creation tools and support.</p>
+            <div class="card-body" style="padding-bottom: 0px;">
+              <h5 class="card-title"><b>Global Reach</b></h5>
+              <p>Connect with students worldwide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card bg-transparent border-0">
+            <div class="card-body" style="padding-bottom: 0px;">
+              <h5 class="card-title"><b>Simple Tools</b></h5>
+              <p>Course creation tools and support.</p>
             </div>
           </div>
         </div>
@@ -527,7 +692,7 @@
 
       <!-- Call to Action Button -->
       <div class="d-flex justify-content-center mt-4">
-        <a href="#" class="btn-n text-decoration-none  px-4 py-2">Start Teaching Today</a>
+        <a href="#" class="custom-btn text-decoration-none  px-4 py-2">Start Teaching Today</a>
       </div>
     </div>
   </div>
@@ -543,6 +708,35 @@
     crossorigin="anonymous"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/custom.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('[data-category]');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+
+          const filterValue = this.getAttribute('data-filter');
+
+          // Show or hide images based on the selected filter
+          galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
 
 </body>
 

@@ -1,6 +1,7 @@
 .header {
   background-color: #f5f5f5;
 }
+
 .header .custom-b {
   background-color: #00CBB8;
   padding: 10px 20px;
@@ -12,13 +13,14 @@
   margin: 50px 0 0 46px;
 }
 
-.custom-btn{
+.custom-btn {
   background-color: white;
   padding: 10px 20px;
   border-radius: 30px;
   border: none;
 }
-.custom-btn:hover{
+
+.custom-btn:hover {
   background-color: gray;
 }
 
@@ -32,7 +34,8 @@
   background-color: #f5f5f5;
 }
 
-.about h1, h2 {
+.about h1,
+h2 {
   color: #2c3e50;
 }
 
@@ -76,22 +79,73 @@
   background-color: #f5f5f5;
 }
 
-.course button {
-  background-color: #00CBB8;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 30px;
+.course .custom-class {
+  margin-left: 195px;
 }
 
-.course button:hover {
-  background-color: #2c3e50;
+.filter-btn {
+  border-radius: 20px; 
+  background-color: transparent;
+  color: #00CBB8;
+  margin: 0 5px; 
+  transition: all 0.3s ease-in-out;
+  box-shadow: none;
 }
 
-.course .custom-btn {
+.filter-btn.active {
   background-color: #00CBB8;
-  padding: 10px 20px;
   color: white;
-  border-radius: 30px;  
+}
+
+.course .filter-btn:hover {
+  background-color: #00CBB8;
+  border-radius: 20px;
+  color: white;
+}
+
+.course .row {
+  grid-row-gap: 30px;
+}
+
+.course img {
+  justify-content: center;
+  align-items: center;
+}
+
+.course .equal-height {
+  object-fit: cover;
+  height: 80px;
+  margin-left: 18px;
+}
+.course .button {
+  color: white;
+  background-color: #00CBB8;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+/* Features */
+
+.feature span {
+  color: #00CBB8;
+}
+
+.tool {
+  background-color: #f5f5f5;
+}
+
+.tool span {
+  color: #00CBB8;
+}
+
+/* Testimonial */
+.testimonial button {
+  background-color: #000; 
+  color: #fff; 
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px;
+  margin-top: 230px;
 }
 
 /* Responsive Adjustments */
@@ -101,43 +155,41 @@
   }
 }
 
-.more-feature {
-  background-color: #f8f9fa;
-}
-
 /* famous-categorie */
-.famous-categorie {
+.categorie {
   background-color: #f4f4f9;
 }
-
-.famous-categorie .owl-carousel .owl-dots {
-  margin-top: 48px;
-  text-align: center;
+.categorie h1 span {
+  color: #00CBB8;
 }
-
-.famous-categorie .owl-carousel .owl-dots button:not(:last-of-type) {
-  margin-right: 10px;
-}
-
-.famous-categorie .owl-carousel .owl-dots button span {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border: 1px solid #000;
+.categorie button {
+  background-color: #000; 
+  color: #fff; 
   border-radius: 50%;
+  width: 50px; 
+  height: 50px;
+  margin-top: 230px;
+}
+.categorie .custom-btn {
+  background-color: #00CBB8;
+  color: white;
+  border-radius: 30px;
+  border: none;
 }
 
-.famous-categorie .owl-carousel .owl-dots button.active span {
-  background: #000;
+/* Teacher */
+.teacher span {
+  color: #00CBB8;
 }
-
-/* become a teacher */
-.become-teacher-section {
-  background-color: #f8f9fa;
-  border-radius: 8px;
+.teacher .custom-btn {
+  background-color: #00CBB8;
+  color: white;
+  border: none;
+  border-radius: 30px;
 }
 
 /* footer */
 .footer {
   background-color: #f5f5f5;
 }
+

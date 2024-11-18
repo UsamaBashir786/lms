@@ -57,7 +57,7 @@
             </div>
             <h5 class="card-title text-center"><b>JavaScript</b></h5>
             <p class="card-text">Get hands-on experience with JavaScript to make your websites interactive.</p>
-            <div class="text-center">
+            <div class="text-center" style="margin-top: 30px;">
               <a href="js_course.php" class="btn btn-primary">Start Learning</a>
             </div>
           </div>
