@@ -1,57 +1,57 @@
-
-.color-00CBB8 {
-  color: #00CBB8;
+.header {
+  background-color: #f5f5f5;
 }
-
-.color-F48C06 {
-  color: #936019;
-}
-
-.color-666 {
-  color: #666;
-}
-.btn-n{
+.header .custom-b {
   background-color: #00CBB8;
   padding: 10px 20px;
   color: white;
   border-radius: 30px;
-  border: none;
-}
-.btn-n:hover{
-  background-color: #252641;
 }
 
+.banner h1 {
+  margin: 50px 0 0 46px;
+}
 
-.btn-new{
-  background-color: #fff;
+.custom-btn{
+  background-color: white;
   padding: 10px 20px;
   border-radius: 30px;
   border: none;
-  outline: none;  
 }
-.btn-new:hover{
-  background-color: #252641;
-  color: #fff !important;
+.custom-btn:hover{
+  background-color: gray;
 }
-
-
-
-.get-started-btn {
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-}
-
-.get-started-btn:hover {
-  background-color: #333; /* Darker shade */
-  color: #fff; /* White text */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
-}
-
 
 .card {
   border-radius: 20px;
 }
 
-/* navbar */
+/* About Us */
+
+.features {
+  background-color: #f5f5f5;
+}
+
+.about h1, h2 {
+  color: #2c3e50;
+}
+
+.about .lead {
+  color: #34495e;
+}
+
+.about img {
+  object-fit: cover;
+}
+
+.about .section {
+  margin-top: 50px;
+}
+
+.about .row div {
+  margin-bottom: 30px;
+}
+
 
 /* banner */
 .banner {
@@ -59,14 +59,39 @@
   height: 500px;
 }
 
-.banner1 {
-  margin-top: 2px;
-  margin-left: 150px;
+/* tutor */
+.tutor span {
+  color: #00CBB8;
 }
 
-/* General Updates */
-.Courses {
-  background-color: #f4f4f9;
+.tutor .custom-btn {
+  background-color: #00CBB8;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 30px;
+}
+
+/* Course */
+.course {
+  background-color: #f5f5f5;
+}
+
+.course button {
+  background-color: #00CBB8;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 30px;
+}
+
+.course button:hover {
+  background-color: #2c3e50;
+}
+
+.course .custom-btn {
+  background-color: #00CBB8;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 30px;  
 }
 
 /* Responsive Adjustments */
@@ -114,5 +139,5 @@
 
 /* footer */
 .footer {
-  background-color: #252641;
+  background-color: #f5f5f5;
 }

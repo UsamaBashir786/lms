@@ -26,76 +26,66 @@
   <div class="banner">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 mt-5">
-          <div class="d-flex ms-5">
-            <h1 class="text-dark ms-5 mt-5 me-2">Studying </h1>
-            <h1 class="mt-5 text-white"> Online is now</h1>
-          </div>
-          <div class="ms-5">
-            <h1 class="ms-5 text-white"> much easier</h1>
+        <div class="col-md-6">
+          <div class="d-flex mt-5">
+            <h1 class="text-dark">Studying <span class="text-white">Online is now <br> much easier</span></h1>
           </div>
           <div>
-            <div class="ms-5">
-              <p class="ms-5 text-white">
+            <div class="ms-5 py-2">
+              <p class="text-white">
                 Interactive E-Tutor is an interesting platform that will teach <br>you in a more interactive way
               </p>
-              <button class="btn-new ms-5 text-dark" type="submit">Get Started</button>
-
+              <button class="text-dark custom-btn" type="submit">Get Started</button>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <img class="banner1" src="assets/images/banner1" alt="banner1" height="550px">
+        <div class="col-md-6 d-flex justify-content-center">
+          <img src="assets/images/banner1" alt="banner1" height="550px">
         </div>
       </div>
     </div>
   </div>
 
   <!-- Why interactive E-Tutor -->
-  <div class="container ">
-    <div class="row py-5">
-      <div class="col-md-12 pb-5 d-flex justify-content-center">
-        <h1 class="me-2 color-252641">Why</h1>
-        <h1 class="color-F48C06">Interactive E-Tutor?</h1>
-      </div>
-      <div class="col-md-6">
-        <div>
+  <div class="tutor py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+          <h1 class="mb-5"><span>Why</span> Interactive E-Tutor?</h1>
+        </div>
+        <div class="col-md-6">
           <h1>"Everything You Can Do in a Classroom, You Can Do with TOTC"</h1>
-        </div>
-        <div>
-          <p class="color-666">TOTC’s school management software helps traditional and online schools manage scheduling,
+          <p>TOTC's school management software helps traditional and online schools manage scheduling,
             attendance, payments and virtual classrooms all in one secure cloud-based system.</p>
+          <div>
+            <button class="custom-btn my-2 text-white" type="submit">Get Started</button>
+          </div>
         </div>
-        <div>
-          <button class="btn-n btn-light my-2 text-white" type="submit">Get Started</button>
+        <div class="col-md-6  position-relative">
+          <div class="ms-5">
+            <img src="assets/images/php" alt="why" class="ms-5 mb-4" height="400px">
+          </div>
         </div>
-      </div>
-      <div class="col-md-6  position-relative">
-        <div class="ms-5">
-          <img src="assets/images/php" alt="why" class="ms-5 mb-4" height="400px">
-        </div>
-
       </div>
     </div>
   </div>
 
   <!-- Courses  -->
-  <div class="famous-categorie py-5">
+  <div class="course py-5">
     <div class="container">
       <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="col-md-12">
           <h1 class="text-center ">Courses</h1>
         </div>
         <div class="col-md-12 d-flex justify-content-center py-3">
-          <button class="btn-n me-3 text-white"> All</button>
-          <button class="btn-n me-3 text-white"> HTML</button>
-          <button class="btn-n me-3 text-white"> CSS</button>
-          <button class="btn-n me-3 text-white"> PHP</button>
-          <button class="btn-n me-3 text-white"> Bootstrap</button>
-          <button class="btn-n me-3 text-white"> XML</button>
-          <button class="btn-n me-3 text-white"> Java</button>
-          <button class="btn-n me-3 text-white"> Node JS</button>
-          <button class="btn-n me-3 text-white"> JS</button>
+          <button class="me-3 text-white border-0"> All</button>
+          <button class="me-3 text-white border-0"> HTML</button>
+          <button class="me-3 text-white border-0"> CSS</button>
+          <button class="me-3 text-white border-0"> PHP</button>
+          <button class="me-3 text-white border-0"> Bootstrap</button>
+          <button class="me-3 text-white border-0"> XML</button>
+          <button class="me-3 text-white border-0"> Java</button>
+          <button class="me-3 text-white border-0"> JS</button>
         </div>
         <div class="carousel-inner mb-4">
           <div class="carousel-item active">
@@ -103,7 +93,7 @@
               <!-- Card 1 -->
               <div class="col-md-4 mt-5">
                 <div class="card border-0 bg-transparent" style="width: 100%;">
-                  <img class="card-img-top" src="assets/images/html" alt="HTML">
+                  <img src="assets/images/html" alt="HTML">
                   <div class="card-body d-flex flex-column">
                     <h5 class="card-title">HTML Basics</h5>
                     <p class="card-text">By John Doe</p>
@@ -115,7 +105,7 @@
                       <i class="bi bi-star-fill" style="color: gold;"></i>
                     </span>
                     <div class="mt-auto">
-                      <a href="#" class="btn-filter text-decoration-none text-white">Price: $10</a>
+                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $10</a>
                     </div>
                   </div>
                 </div>
@@ -136,7 +126,7 @@
                       <i class="bi bi-star-fill" style="color: gold;"></i>
                     </span>
                     <div class="mt-auto">
-                      <a href="#" class="btn-filter text-decoration-none text-white">Price: $15</a>
+                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $15</a>
                     </div>
                   </div>
                 </div>
@@ -157,7 +147,7 @@
                       <i class="bi bi-star-fill" style="color: gold;"></i>
                     </span>
                     <div class="mt-auto">
-                      <a href="#" class="btn-filter text-decoration-none text-white">Price: $20</a>
+                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $20</a>
                     </div>
                   </div>
                 </div>
@@ -183,7 +173,7 @@
                       <i class="bi bi-star-fill" style="color: gold;"></i>
                     </span>
                     <div class="mt-auto">
-                      <a href="#" class="btn-filter text-decoration-none text-white">Price: $25</a>
+                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $25</a>
                     </div>
                   </div>
                 </div>
@@ -204,7 +194,7 @@
                       <i class="bi bi-star-fill" style="color: gold;"></i>
                     </span>
                     <div class="mt-auto">
-                      <a href="#" class="btn-filter text-decoration-none text-white">Price: $30</a>
+                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $30</a>
                     </div>
                   </div>
                 </div>
@@ -225,7 +215,7 @@
                       <i class="bi bi-star-fill" style="color: gold;"></i>
                     </span>
                     <div class="mt-auto">
-                      <a href="#" class="btn-filter text-decoration-none text-white">Price: $35</a>
+                      <a href="#" class="custom-btn text-decoration-none text-white">Price: $35</a>
                     </div>
                   </div>
                 </div>
@@ -543,7 +533,7 @@
   </div>
 
   <!-- footer -->
-  <? include 'includes/footer.php' ?>
+  <?php include 'includes/footer.php' ?>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
