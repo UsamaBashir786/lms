@@ -19,41 +19,88 @@
 </head>
 
 <body>
-  <!-- header -->
-  <?php include 'includes/header.php' ?>
+  <!-- Header -->
+  <?php include 'includes/header.php'; ?>
 
-  <!-- banner -->
-  <div class="banner">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mt-5">
-          <div class="d-flex ms-5">
-            <h1 class="text-dark ms-5 mt-5 me-2">Studying </h1>
-            <h1 class="mt-5 text-white"> Online is now</h1>
-          </div>
-          <div class="ms-5">
-            <h1 class="ms-5 text-white"> much easier</h1>
-          </div>
-          <div>
-            <div class="ms-5">
-              <p class="ms-5 text-white">
-                Interactive E-Tutor is an interesting platform that will teach <br>you in a more interactive way
-              </p>
-              <button class="btn-new ms-5 text-dark" type="submit">Get Started</button>
+  <div class="about">
+    <div class="container my-5">
+      <section class="text-center">
+        <h1>About Interactive E-Tutor</h1>
+        <p class="lead mt-4">
+          At <strong>Interactive E-Tutor</strong>, we believe in empowering students with innovative and interactive learning experiences. Our platform integrates engaging video lessons, real-time quizzes, and live classes to enhance learning outcomes and keep students motivated.
+        </p>
+      </section>
+    </div>
 
+    <!-- Key Features Section -->
+    <div class="features py-5">
+      <div class="container">
+        <section class="row text-center">
+          <div class="col-md-4">
+            <div class="card rounded-0 bg-white shadow border-0">
+              <div class="card-body">
+                <i class="bi bi-play-circle-fill text-primary fs-1"></i>
+                <h3>Interactive Video Lessons</h3>
+                <p>Watch educational videos that pause for quizzes to ensure comprehension.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <img class="banner1" src="assets/images/banner1" alt="banner1" height="550px">
-        </div>
+          <div class="col-md-4">
+            <div class="card rounded-0 bg-white shadow border-0">
+              <div class="card-body">
+                <i class="bi bi-bar-chart-fill text-success fs-1"></i>
+                <h3>Real-Time Assessments</h3>
+                <p>Interactive quizzes at key moments to test understanding and provide instant feedback.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card rounded-0 bg-white shadow border-0">
+              <div class="card-body">
+                <i class="bi bi-play-circle-fill text-primary fs-1"></i>
+                <h3>Live Classes</h3>
+                <p>Join live visual classes with teachers, interact in real-time, and share content seamlessly.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Our Team Section -->
+    <div class="team py-5">
+      <div class="container">
+        <section class="text-center">
+          <h2>Meet Our Team</h2>
+          <div class="row mt-4">
+            <!-- Team Member 1 -->
+            <div class="col-md-4">
+              <img src="assets/images/ceo.webp" class="rounded-circle" alt="Team Member" width="150" height="150">
+              <h4>Jahanzaib</h4>
+              <p>Founder & Lead Developer</p>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="col-md-4">
+              <img src="assets/images/content.webp" class="rounded-circle" alt="Team Member" width="150" height="150">
+              <h4>Sarah Khan</h4>
+              <p>Content Specialist</p>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="col-md-4">
+              <img src="assets/images/market.webp" class="rounded-circle" alt="Team Member" width="150" height="150">
+              <h4>Ali Ahmed</h4>
+              <p>UI/UX Designer</p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
 
-  <!-- footer -->
-  <? include 'includes/footer.php' ?>
+  <!-- Footer -->
+  <?php include 'includes/footer.php'; ?>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
