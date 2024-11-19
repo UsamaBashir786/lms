@@ -9,10 +9,6 @@
   border-radius: 30px;
 }
 
-.banner h1 {
-  margin: 50px 0 0 46px;
-}
-
 .custom-btn {
   background-color: white;
   padding: 10px 20px;
@@ -57,9 +53,13 @@ h2 {
 
 
 /* banner */
-.banner {
+.home-banner {
   background-color: #00CBB8;
   height: 500px;
+}
+
+.home-banner h1 {
+  margin: 40px 0 10px 45px;
 }
 
 /* tutor */
@@ -186,6 +186,57 @@ h2 {
   color: white;
   border: none;
   border-radius: 30px;
+}
+
+/* Contact */
+.contact .banner {
+  position: relative;
+  background-image: url('/assets/images/background-contact.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(14, 12, 12, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+.contact .content {
+  position: relative;
+  z-index: 2; /* Ensures content stays above the overlay */
+  color: white;
+}
+
+.info {
+  background-color: #ece9e9
+}
+
+.info .msg .btn {
+  background-color: #6D9A87;
+  color: white;
+}
+
+/* Login */
+
+.login .image {
+  margin-top: -60px;
+  margin-left: 150px;
+}
+
+/* Register */
+
+.register .image {
+  margin-top: -60px;
+  margin-left: 150px;
 }
 
 /* footer */

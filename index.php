@@ -31,7 +31,7 @@
   <?php include 'includes/header.php' ?>
 
   <!-- banner -->
-  <div class="banner">
+  <div class="home-banner">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -43,7 +43,7 @@
               <p class="text-white">
                 Interactive E-Tutor is an interesting platform that will teach <br>you in a more interactive way
               </p>
-              <button class="text-dark custom-btn" type="submit">Get Started</button>
+              <button class="text-dark custom-btn mt-3" type="submit">Get Started</button>
             </div>
           </div>
         </div>

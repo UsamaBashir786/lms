@@ -5,7 +5,7 @@
       <div class="col-md-3 mt-5">
         <div>
           <img src="assets/images/logo" alt="logo" height="70">
-          <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quidem ea ex
+          <p class="my-3 text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quidem ea ex
             provident. Sequi quos sint placeat nobis eius debitis minima aliquid non. Aspernatur commodi incidunt
             voluptates consequuntur, architecto aperiam.</p>
         </div>
