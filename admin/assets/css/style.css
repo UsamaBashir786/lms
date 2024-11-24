@@ -1,0 +1,71 @@
+.bottom-border {
+  border-bottom: 2px solid #ddd;
+  background-color: #f8f9fa;
+}
+
+.notification-icon {
+  position: relative;
+  font-size: 24px;
+  color: #000;
+  margin-right: 1rem;
+}
+
+.notification-icon .badge {
+  font-size: 11px !important;
+  position: absolute;
+  top: 2px;
+  right: -3px;
+  padding: 0.4em 0.6em;
+  font-size: 0.75em;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+}
+
+
+.navbar-nav {
+  display: flex;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f8f9fa;
+  height: 100%;
+}
+
+.sidebar .nav-link.active {
+  color: blue !important;
+  border-radius: 5px;
+}
+
+
+
+.sidebar-border {
+  border-right: 2px solid #ddd;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

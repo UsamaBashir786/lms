@@ -4,7 +4,7 @@
       <!-- Column 1: Logo and description -->
       <div class="col-md-3 mt-5">
         <div>
-          <img src="assets/images/logo" alt="logo" height="70">
+          <img src="/assets/images/logo.png" alt="logo" height="70">
           <p class="my-3 text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quidem ea ex
             provident. Sequi quos sint placeat nobis eius debitis minima aliquid non. Aspernatur commodi incidunt
             voluptates consequuntur, architecto aperiam.</p>
@@ -58,8 +58,14 @@
     </div>
   </div>
 </div>
-<div class="col-md-12 bg-secondary text-center p">
+<div class="col-md-12 bg-secondary text-center">
   <div class="text-white py-3">
     Copyright &copy;2024. All right reserved
   </div>
 </div>
+
+<!-- Bootstrap JS link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

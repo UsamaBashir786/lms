@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Home - E-learning</title>
-
-  <!-- Bootstrap CSS link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <!-- Bootstrap Icons link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- MDBootstrap CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
-
-  <!-- MDBootstrap JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
-
-
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-  <!-- header -->
   <?php include 'includes/header.php' ?>
 
   <!-- banner -->
@@ -48,7 +19,7 @@
           </div>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
-          <img src="assets/images/banner1" alt="banner1" height="550px">
+          <img src="assets/images/banner1" alt="banner1" height="553px">
         </div>
       </div>
     </div>
@@ -737,7 +708,3 @@
       });
     });
   </script>
-
-</body>
-
-</html>
