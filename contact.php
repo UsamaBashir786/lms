@@ -78,8 +78,8 @@
                 <div class="mb-3">
                   <textarea class="form-control" id="message" name="message" placeholder="Message" rows="3" required></textarea>
                 </div>
-                <div class="msg mb-2">
-                  <a href="#" class="btn btn-light custom-btn rounded-0 pe-3 ps-3 py-2">Send Message</a>
+                <div class=" mb-2">
+                  <a href="#" class="btn btn-dark rounded-0 pe-3 ps-3 py-2">Send Message</a>
                 </div>
               </form>
             </div>

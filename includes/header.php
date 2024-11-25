@@ -54,7 +54,7 @@
               <a class="nav-link me-3" href="contact.php">Contact</a>
             </li>
           </ul>
-          <a href="/login.php " class="custom-b text-decoration-none border-0">Get Started</a>
+          <a href="/login.php " class="btn btn-dark">Get Started</a>
         </div>
       </div>
     </nav>

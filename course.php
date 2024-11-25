@@ -13,7 +13,7 @@
             <h5 class="card-title text-center"><b>HTML</b></h5>
             <p class="card-text">Learn the fundamentals of HTML to create the structure of your web pages.</p>
             <div class="text-center">
-              <a href="html_course.php" class="btn btn-primary">Start Learning</a>
+              <a href="html_course.php" class="btn btn-dark">Start Learning</a>
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@
             <h5 class="card-title text-center"><b>CSS</b></h5>
             <p class="card-text">Master CSS to style your web pages with stunning layouts and designs.</p>
             <div class="text-center">
-              <a href="css_course.php" class="btn btn-primary">Start Learning</a>
+              <a href="css_course.php" class="btn btn-dark">Start Learning</a>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
             <h5 class="card-title text-center"><b>JavaScript</b></h5>
             <p class="card-text">Get hands-on experience with JavaScript to make your websites interactive.</p>
             <div class="text-center" style="margin-top: 30px;">
-              <a href="js_course.php" class="btn btn-primary">Start Learning</a>
+              <a href="js_course.php" class="btn btn-dark">Start Learning</a>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
             <h5 class="card-title text-center"><b>PHP</b></h5>
             <p class="card-text">Dive into PHP to develop dynamic server-side web applications.</p>
             <div class="text-center">
-              <a href="php_course.php" class="btn btn-primary">Start Learning</a>
+              <a href="php_course.php" class="btn btn-dark">Start Learning</a>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@
             <h5 class="card-title text-center"><b>Bootstrap</b></h5>
             <p class="card-text">Learn Bootstrap to quickly build responsive and mobile-friendly websites.</p>
             <div class="text-center">
-              <a href="bootstrap_course.php" class="btn btn-primary">Start Learning</a>
+              <a href="bootstrap_course.php" class="btn btn-dark">Start Learning</a>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
             <h5 class="card-title text-center"><b>XML</b></h5>
             <p class="card-text">Understand XML for data storage and web services.</p>
             <div class="text-center">
-              <a href="xml_course.php" class="btn btn-primary">Start Learning</a>
+              <a href="xml_course.php" class="btn btn-dark">Start Learning</a>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@
             <h5 class="card-title text-center"><b>Java</b></h5>
             <p class="card-text">Master Java to build robust applications and software solutions.</p>
             <div class="text-center">
-              <a href="java_course.php" class="btn btn-primary">Start Learning</a>
+              <a href="java_course.php" class="btn btn-dark">Start Learning</a>
             </div>
           </div>
         </div>

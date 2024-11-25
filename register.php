@@ -85,12 +85,17 @@
                   </label>
                 </div>
               </form>
-              <button type="submit" class="btn btn-primary px-4">Register</button>
+              <button type="submit" class="btn btn-dark px-4">Register</button>
             </div>
             <div class="card-footer">
               <span>Already have an account?</span>
               <a href="login.php">Login</a>
             </div>
+          </div>
+          <div class="home-page text-center mt-3">
+            <a class="text-decoration-none" href="index.php">
+              <i class="bi bi-arrow-left"></i> Back to Home
+            </a>
           </div>
         </div>
         <div class="col-6">

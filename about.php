@@ -24,7 +24,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card rounded-0 bg-white shadow border-0">
+            <div class="card rounded-0 bg-white shadow border-0 py-1">
               <div class="card-body">
                 <i class="bi bi-bar-chart-fill text-success fs-1"></i>
                 <h3>Real-Time Assessments</h3>
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card rounded-0 bg-white shadow border-0">
+            <div class="card rounded-0 bg-white shadow border-0 py-1">
               <div class="card-body">
                 <i class="bi bi-play-circle-fill text-primary fs-1"></i>
                 <h3>Live Classes</h3>

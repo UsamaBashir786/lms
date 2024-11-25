@@ -2,24 +2,6 @@
   background-color: #f5f5f5;
 }
 
-.header .custom-b {
-  background-color: #00CBB8;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 30px;
-}
-
-.custom-btn {
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  border: none;
-}
-
-.custom-btn:hover {
-  background-color: gray;
-}
-
 .card {
   border-radius: 20px;
 }
@@ -67,13 +49,6 @@ h2 {
   color: #00CBB8;
 }
 
-.tutor .custom-btn {
-  background-color: #00CBB8;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 30px;
-}
-
 /* Course */
 .course {
   background-color: #f5f5f5;
@@ -86,19 +61,19 @@ h2 {
 .filter-btn {
   border-radius: 20px; 
   background-color: transparent;
-  color: #00CBB8;
+  color: black;
   margin: 0 5px; 
   transition: all 0.3s ease-in-out;
   box-shadow: none;
 }
 
 .filter-btn.active {
-  background-color: #00CBB8;
+  background-color: black;
   color: white;
 }
 
 .course .filter-btn:hover {
-  background-color: #00CBB8;
+  background-color: black;
   border-radius: 20px;
   color: white;
 }
@@ -116,12 +91,6 @@ h2 {
   object-fit: cover;
   height: 80px;
   margin-left: 18px;
-}
-.course .button {
-  color: white;
-  background-color: #00CBB8;
-  border-radius: 20px;
-  margin-left: 20px;
 }
 
 /* Features */
@@ -162,30 +131,10 @@ h2 {
 .categorie h1 span {
   color: #00CBB8;
 }
-.categorie button {
-  background-color: #000; 
-  color: #fff; 
-  border-radius: 50%;
-  width: 50px; 
-  height: 50px;
-  margin-top: 230px;
-}
-.categorie .custom-btn {
-  background-color: #00CBB8;
-  color: white;
-  border-radius: 30px;
-  border: none;
-}
 
 /* Teacher */
 .teacher span {
   color: #00CBB8;
-}
-.teacher .custom-btn {
-  background-color: #00CBB8;
-  color: white;
-  border: none;
-  border-radius: 30px;
 }
 
 /* Contact */
@@ -220,20 +169,12 @@ h2 {
   background-color: #ece9e9
 }
 
-.info .msg .btn {
-  background-color: #6D9A87;
-  color: white;
-}
 
 /* Login */
 
 .login .image {
   margin-top: -60px;
   margin-left: 150px;
-}
-
-.login .home-page {
-  margin-top: -55px;
 }
 
 /* Register */

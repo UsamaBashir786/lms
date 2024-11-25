@@ -49,13 +49,6 @@
   height: 100%;
 }
 
-.sidebar .nav-link.active {
-  color: blue !important;
-  border-radius: 5px;
-}
-
-
-
 .sidebar-border {
   border-right: 2px solid #ddd;
 }

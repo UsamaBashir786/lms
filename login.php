@@ -37,23 +37,23 @@
                   <input type="checkbox" class="form-check-input" id="remember" name="remember">
                   <label class="form-check-label" for="remember">Remember me</label>
                 </div>
-                <button type="submit" class="btn btn-primary px-4 my-3">Login</button>
+                <button type="submit" class="btn btn-dark px-4 my-3">Login</button>
               </form>
             </div>
             <div class="card-footer">
               <p class="mt-3">Don't have an account? <a href="register.php">Register Here</a></p>
             </div>
           </div>
+          <div class="home-page text-center mt-3">
+            <a class="text-decoration-none" href="index.php">
+              <i class="bi bi-arrow-left"></i> Back to Home
+            </a>
+          </div>
         </div>
         <div class="col-6">
           <img src="assets/images/banner1.png" class="image" alt="banner1" height="600" width="400">
         </div>
       </div>
-    </div>
-    <div class="home-page text-center">
-      <a class="text-decoration-none" href="index.php">
-        <i class="bi bi-arrow-left"></i> Back to Home
-      </a>
     </div>
   </div>
 
