@@ -12,20 +12,143 @@
   </div>
 
   <!-- Start of the user table -->
-  <table class="table custom-table table-bordered mt-4 ms-2">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Date Of Birth</th>
-        <th scope="col">Gender</th>
-        <th scope="col" style="width: 200px;">Action</th>
-      </tr>
-    </thead>
-  </table>
+  <div class="user">
+    <table class="table table-hover table-striped text-center mt-3">
+      <thead>
+        <tr>
+          <th><input type="checkbox"></th>
+          <th scope="col">ID</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">DOB</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Action</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1</td>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@gmail.com</td>
+          <td>123-456-7890</td>
+          <td>01-01-2020</td>
+          <td>Male</td>
+          <td>
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </td>
+        </tr>
+        <tr class="custom-row">
+          <td><input type="checkbox"></td>
+          <td>2</td>
+          <td>Jack</td>
+          <td>William</td>
+          <td>jack@gmail.com</td>
+          <td>123-456-0987</td>
+          <td>02-02-2010</td>
+          <td>Male</td>
+          <td>
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1</td>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@gmail.com</td>
+          <td>123-456-7890</td>
+          <td>01-01-2020</td>
+          <td>Male</td>
+          <td>
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </td>
+        </tr>
+        <tr class="custom-row">
+          <td><input type="checkbox"></td>
+          <td>2</td>
+          <td>Jack</td>
+          <td>William</td>
+          <td>jack@gmail.com</td>
+          <td>123-456-0987</td>
+          <td>02-02-2010</td>
+          <td>Male</td>
+          <td>
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1</td>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@gmail.com</td>
+          <td>123-456-7890</td>
+          <td>01-01-2020</td>
+          <td>Male</td>
+          <td>
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </td>
+        </tr>
+        <tr class="custom-row">
+          <td><input type="checkbox"></td>
+          <td>2</td>
+          <td>Jack</td>
+          <td>William</td>
+          <td>jack@gmail.com</td>
+          <td>123-456-0987</td>
+          <td>02-02-2010</td>
+          <td>Male</td>
+          <td>
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>1</td>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@gmail.com</td>
+          <td>123-456-7890</td>
+          <td>01-01-2020</td>
+          <td>Male</td>
+          <td>
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </td>
+        </tr>
+        <tr class="custom-row">
+          <td><input type="checkbox"></td>
+          <td>2</td>
+          <td>Jack</td>
+          <td>William</td>
+          <td>jack@gmail.com</td>
+          <td>123-456-0987</td>
+          <td>02-02-2010</td>
+          <td>Male</td>
+          <td>
+            <a href="#">View</a>
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </td>
+        </tr>
+      </thead>
+    </table>
+  </div>
   <!-- End of the user table -->
 
   <?php require_once '../footer.php'; ?>

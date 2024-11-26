@@ -4,7 +4,11 @@
   <div class="row">
     <div class="col-lg-2 p-0">
       <nav class="sidebar sidebar-border p-3">
-        <h3 class="text-dark fs-3 ms-3">Dashboard</h3>
+        <a href="/admin/index.php" class="text-decoration-none fs-3 ms-4">Dashboard</a>
+        <?php
+        // Get the current file name
+        $currentPage = basename($_SERVER['PHP_SELF']);
+        ?>
         <div class="accordion mt-4 border-0" id="sidebarAccordion">
           <!-- Users Section -->
           <div class="accordion-item border-0">
@@ -18,8 +22,8 @@
               data-bs-parent="#sidebarAccordion">
               <div class="accordion-body p-0">
                 <ul class="list-unstyled ms-3">
-                  <li><a class="text-dark text-decoration-none" href="#">All Courses</a></li>
-                  <li><a class="text-dark text-decoration-none" href="#">Add Course</a></li>
+                  <li><a class="text-dark text-decoration-none" href="/admin/course/all.php" <?= ($currentPage == 'all.php' && strpos($_SERVER['REQUEST_URI'], 'course') !== false) ? 'active' : '' ?>>All Courses</a></li>
+                  <li><a class="text-dark text-decoration-none" href="/admin/course/create.php" <?= ($currentPage == 'create.php' && strpos($_SERVER['REQUEST_URI'], 'course') !== false) ? 'active' : '' ?>>Add Course</a></li>
                   <li><a class="text-dark text-decoration-none" href="#">Categories</a></li>
                   <li><a class="text-dark text-decoration-none" href="#">Tags</a></li>
                 </ul>
@@ -56,9 +60,9 @@
               data-bs-parent="#sidebarAccordion">
               <div class="accordion-body p-0">
                 <ul class="list-unstyled ms-3">
-                  <li><a class="text-dark text-decoration-none" href="#">All Users</a></li>
-                  <li><a class="text-dark text-decoration-none" href="/admin/users/index.php">Add User</a></li>
-                  <li><a class="text-dark text-decoration-none" href="/admin/teacher/index.php">Teachers</a></li>
+                  <li><a class="text-dark text-decoration-none" href="/admin/users/index.php" <?= ($currentPage == 'index.php' && strpos($_SERVER['REQUEST_URI'], 'users') !== false) ? 'active' : '' ?>>All Users</a></li>
+                  <li><a class="text-dark text-decoration-none" href="/admin/users/add.php" <?= ($currentPage == 'add.php' && strpos($_SERVER['REQUEST_URI'], 'users') !== false) ? 'active' : '' ?>>Add User</a></li>
+                  <li><a class="text-dark text-decoration-none" href="">Teachers</a></li>
                   <li><a class="text-dark text-decoration-none" href="#">Students</a></li>
                   <li><a class="text-dark text-decoration-none" href="#">Admins</a></li>
                 </ul>
@@ -77,8 +81,8 @@
               data-bs-parent="#sidebarAccordion">
               <div class="accordion-body p-0">
                 <ul class="list-unstyled ms-3">
-                  <li><a class="text-dark text-decoration-none" href="/admin/settings.php">Edit Profile</a></li>
-                  <li><a class="text-dark text-decoration-none" href="/admin/settings.php">General</a></li>
+                  <li><a class="text-dark text-decoration-none" href="/admin/settings.php" <?= ($currentPage == 'settings.php') ? 'active' : '' ?>>Edit Profile</a></li>
+                  <li><a class="text-dark text-decoration-none" href="/admin/settings.php" <?= ($currentPage == 'settings.php') ? 'active' : '' ?>>General</a></li>
                   <li><a class="text-dark text-decoration-none" href="/admin/settings.php">Header</a></li>
                   <li><a class="text-dark text-decoration-none" href="/admin/settings.php">Footer</a></li>
                 </ul>
@@ -88,3 +92,19 @@
         </div>
       </nav>
     </div>
+
+    <script>
+      // Select all sidebar links
+      const links = document.querySelectorAll('.sidebar a');
+
+      // Add click event to each link
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          // Remove active-link class from all links
+          links.forEach(l => l.classList.remove('active-link'));
+
+          // Add active-link class to the clicked link
+          link.classList.add('active-link');
+        });
+      });
+    </script>
