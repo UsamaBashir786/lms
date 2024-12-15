@@ -26,15 +26,23 @@
           <td>30$</td>
           <td>2 Months</td>
           <td>
-            <div class="dropdown">
-              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="usersHeading1">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#usersCollapse1" aria-expanded="false" aria-controls="usersCollapse1">
+                  Select
+                </button>
+              </h2>
+              <div id="usersCollapse1" class="accordion-collapse collapse" aria-labelledby="usersHeading1"
+                data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0">
+                  <ul class="list-unstyled ms-3">
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </td>
         </tr>
@@ -46,15 +54,23 @@
           <td>20$</td>
           <td>2 Months</td>
           <td>
-            <div class="dropdown">
-              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="usersHeading2">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#usersCollapse2" aria-expanded="false" aria-controls="usersCollapse2">
+                  Select
+                </button>
+              </h2>
+              <div id="usersCollapse2" class="accordion-collapse collapse" aria-labelledby="usersHeading2"
+                data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0">
+                  <ul class="list-unstyled ms-3">
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </td>
         </tr>
@@ -66,15 +82,23 @@
           <td>50$</td>
           <td>2 Months</td>
           <td>
-            <div class="dropdown">
-              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="usersHeading3">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#usersCollapse3" aria-expanded="false" aria-controls="usersCollapse3">
+                  Select
+                </button>
+              </h2>
+              <div id="usersCollapse3" class="accordion-collapse collapse" aria-labelledby="usersHeading3"
+                data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0">
+                  <ul class="list-unstyled ms-3">
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </td>
         </tr>
@@ -86,15 +110,23 @@
           <td>30$</td>
           <td>2 Months</td>
           <td>
-            <div class="dropdown">
-              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="usersHeading4">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#usersCollapse4" aria-expanded="false" aria-controls="usersCollapse4">
+                  Select
+                </button>
+              </h2>
+              <div id="usersCollapse4" class="accordion-collapse collapse" aria-labelledby="usersHeading4"
+                data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0">
+                  <ul class="list-unstyled ms-3">
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </td>
         </tr>
@@ -106,15 +138,23 @@
           <td>20$</td>
           <td>2 Months</td>
           <td>
-            <div class="dropdown">
-              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="usersHeading5">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#usersCollapse5" aria-expanded="false" aria-controls="usersCollapse5">
+                  Select
+                </button>
+              </h2>
+              <div id="usersCollapse5" class="accordion-collapse collapse" aria-labelledby="usersHeading5"
+                data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0">
+                  <ul class="list-unstyled ms-3">
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </td>
         </tr>
@@ -126,15 +166,23 @@
           <td>50$</td>
           <td>2 Months</td>
           <td>
-            <div class="dropdown">
-              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="usersHeading6">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#usersCollapse6" aria-expanded="false" aria-controls="usersCollapse6">
+                  Select
+                </button>
+              </h2>
+              <div id="usersCollapse6" class="accordion-collapse collapse" aria-labelledby="usersHeading6"
+                data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0">
+                  <ul class="list-unstyled ms-3">
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </td>
         </tr>
@@ -146,15 +194,23 @@
           <td>50$</td>
           <td>2 Months</td>
           <td>
-            <div class="dropdown">
-              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">View</a></li>
-                <li><a class="dropdown-item" href="#">Edit</a></li>
-                <li><a class="dropdown-item" href="#">Delete</a></li>
-              </ul>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="usersHeading7">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#usersCollapse7" aria-expanded="false" aria-controls="usersCollapse7">
+                  Select
+                </button>
+              </h2>
+              <div id="usersCollapse7" class="accordion-collapse collapse" aria-labelledby="usersHeading7"
+                data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0">
+                  <ul class="list-unstyled ms-3">
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </td>
         </tr>

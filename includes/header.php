@@ -48,7 +48,10 @@
               <a class="nav-link me-3" href="/about.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-3" href="/course.php">Courses</a>
+              <a class="nav-link me-3" href="/courses.php">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3" href="/categories.php">Categories</a>
             </li>
             <li class="nav-item">
               <a class="nav-link me-3" href="contact.php">Contact</a>
