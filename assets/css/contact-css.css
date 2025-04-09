@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #006633;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --banner-height: 300px;
+}
+
+
+/* Banner section styles */
+.banner {
+  height: var(--banner-height);
+  background: url('../images/background-contact.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Container styles */
+.container {
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* Row layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-6 {
+  width: 48%;
+  margin-bottom: 30px;
+}
+
+/* Form section styles */
+.form-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.form-section:hover {
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.form-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+}
+
+.form-section label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Button styles */
+.form-section button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.form-section button:hover {
+  background-color: #008cba;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-section h2 {
+    font-size: 1.5rem;
+  }
+}

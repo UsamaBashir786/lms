@@ -1,733 +1,397 @@
-<?php include 'includes/header.php' ?>
+<?php
+session_start();
+include 'db/db.php'
 
-<!-- banner -->
-<div class="home-banner">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="d-flex mt-5">
-          <h1 class="text-dark">Studying <span class="text-white">Online is now <br> much easier</span></h1>
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- css links -->
+  <?php include 'includes/css-links.php' ?>
+</head>
+
+<body>
+  <!-- header  -->
+  <?php include 'includes/header.php' ?>
+  <?php include 'includes/preloader.php' ?>
+  <div style="display: none;" id="main-content">
+    <!-- Swiper -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to Learning Management System</h1>
+        <p>Access a wide variety of courses and enhance your skills</p>
+        <a href="#courses" class="btn btn-custom">Explore Courses</a>
+      </div>
+    </section>
+    <!-- Our Popular Courses -->
+    <section id="courses" class="container my-5">
+      <h2 class="text-center mb-5">Our Popular Courses</h2>
+      <div class="row">
+        <!-- Course Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card course-card">
+            <img src="assets\images\webdevelopment.jpg" alt="Course Image 1">
+            <div class="card-body course-card-body">
+              <h5>Web Development</h5>
+              <p>Learn the fundamentals of front-end and back-end web development with practical projects.</p>
+              <a href="courses.php" class="btn-learn-more">Learn More</a>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="ms-5 py-2">
-            <p class="text-white">
-              Interactive E-Tutor is an interesting platform that will teach <br>you in a more interactive way
+        <!-- Course Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card course-card">
+            <img src="assets\images\datascience.jpg" alt="Course Image 2">
+            <div class="card-body course-card-body">
+              <h5>Data Science</h5>
+              <p>Explore data analysis, machine learning, and big data with hands-on exercises and projects.</p>
+              <a href="courses.php" class="btn-learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card course-card">
+            <img src="assets\images\digitalmarkiting.webp" alt="Course Image 3">
+            <div class="card-body course-card-body">
+              <h5>Digital Marketing</h5>
+              <p>Master the art of online marketing, SEO, social media strategies, and more in this course.</p>
+              <a href="courses.php" class="btn-learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card course-card">
+            <img src="assets\images\graphicsdesign.jpg" alt="Course Image 4">
+            <div class="card-body course-card-body">
+              <h5>Graphic Design</h5>
+              <p>Learn the tools and techniques of graphic design, including Photoshop, Illustrator, and more.</p>
+              <a href="courses.php" class="btn-learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card course-card">
+            <img src="assets\images\python.webp" alt="Course Image 5">
+            <div class="card-body course-card-body">
+              <h5>Python Programming</h5>
+              <p>Master Python with this course covering everything from basics to advanced topics like web scraping.</p>
+              <a href="courses.php" class="btn-learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card course-card">
+            <img src="assets\images\ai.jpg" alt="Course Image 6">
+            <div class="card-body course-card-body">
+              <h5>AI & Machine Learning</h5>
+              <p>Learn the basics and advanced concepts of Artificial Intelligence and Machine Learning with hands-on projects.</p>
+              <a href="courses.php" class="btn-learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <h2>Our Features</h2>
+        <div class="row">
+          <!-- Feature 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card feature-card">
+              <div class="card-body feature-card-body">
+                <div class="icon">
+                  <i class="bi bi-chat-square-text"></i> <!-- Bootstrap Icon for illustration -->
+                </div>
+                <h5>Interactive Learning</h5>
+                <p>Engage with interactive lessons, quizzes, and live discussions to boost learning.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card feature-card">
+              <div class="card-body feature-card-body">
+                <div class="icon">
+                  <i class="bi bi-book-half"></i> <!-- Bootstrap Icon for illustration -->
+                </div>
+                <h5>Wide Range of Courses</h5>
+                <p>Access a variety of courses on different subjects and skills, anytime, anywhere.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card feature-card">
+              <div class="card-body feature-card-body">
+                <div class="icon">
+                  <i class="bi bi-person-check"></i> <!-- Bootstrap Icon for illustration -->
+                </div>
+                <h5>Personalized Learning</h5>
+                <p>Get a learning experience tailored to your skills and needs with personalized feedback.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Feature 4 -->
+          <div class="col-md-4 mb-4">
+            <div class="card feature-card">
+              <div class="card-body feature-card-body">
+                <div class="icon">
+                  <i class="bi bi-clock"></i> <!-- Bootstrap Icon for illustration -->
+                </div>
+                <h5>Flexible Timings</h5>
+                <p>Learn at your own pace with flexible timings and lifetime access to course materials.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Feature 5 -->
+          <div class="col-md-4 mb-4">
+            <div class="card feature-card">
+              <div class="card-body feature-card-body">
+                <div class="icon">
+                  <i class="bi bi-people"></i> <!-- Bootstrap Icon for illustration -->
+                </div>
+                <h5>Community Support</h5>
+                <p>Join a community of learners and instructors to share ideas and get support.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Feature 6 -->
+          <div class="col-md-4 mb-4">
+            <div class="card feature-card">
+              <div class="card-body feature-card-body">
+                <div class="icon">
+                  <i class="bi bi-gear"></i> <!-- Bootstrap Icon for illustration -->
+                </div>
+                <h5>Advanced Tools</h5>
+                <p>Utilize advanced tools and features like progress tracking and course completion certificates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portal Access Section -->
+    <div class="portal-access">
+      <div class="portal-content">
+        <h2>Access Your Portal</h2>
+        <p>Choose your portal to access relevant information and resources.</p>
+        <div class="portal-buttons">
+          <a href="student/student-portal-login.php" class="btn btn-student">Access Student Portal</a>
+          <a href="teacher/teacher-portal-login.php" class="btn btn-teacher">Access Teacher Portal</a>
+        </div>
+      </div>
+    </div>
+    <!-- Learning Website Details Section -->
+    <div class="learning-website-section">
+      <div class="details-container">
+        <div class="text-content">
+          <h2>Why Choose Our Learning Platform?</h2>
+          <p>
+            Our platform offers interactive and engaging learning experiences designed to help you master new skills
+            effectively. With expert instructors, real-world projects, and flexible learning options, you'll achieve
+            your goals in no time.
+          </p>
+          <ul>
+            <li><strong>Expert Instructors:</strong> Learn from industry professionals.</li>
+            <li><strong>Flexible Learning:</strong> Access courses anytime, anywhere.</li>
+            <li><strong>Practical Projects:</strong> Work on real-world assignments.</li>
+            <li><strong>Certification:</strong> Earn certificates to showcase your skills.</li>
+          </ul>
+          <button class="btn custom-btn text-white" style="background-color: var(--primary-color);" onclick="location.href='courses.php'">See Demo</button>
+        </div>
+        <div class="image-content">
+          <img src="assets/images/graphicsdesign.jpg" alt="Learning Platform Demo">
+        </div>
+      </div>
+    </div>
+    <!-- Assessment & Interactive Learning Tools -->
+    <div class="tool py-5">
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-6 py-5">
+            <h1><span>Assessment</span> & Interactive Learning Tools</h1>
+            <p class="mt-4">
+              Empower teachers to assign quizzes, homework, and host live Zoom classes for real-time interaction, ensuring students are consistently engaged, evaluated, and supported throughout their learning journey
             </p>
           </div>
+          <div class="col-md-6">
+            <a href="#"><img src="assets/images/aaq" class="w-100" alt="" height="350px" /></a>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 d-flex justify-content-center">
-        <img src="assets/images/banner1" alt="banner1" height="553px">
-      </div>
     </div>
-  </div>
-</div>
+    <!-- zoom -->
+    <div class="zoom-section">
+      <!-- Left Content -->
+      <div class="content">
+        <h2>Join Our Zoom Meeting</h2>
+        <p>Zoom is a powerful and user-friendly video conferencing platform that allows you to host and attend virtual meetings. Whether you're holding a one-on-one meeting or a large conference, Zoom offers an array of features like screen sharing, whiteboarding, breakout rooms, and more. It's the perfect tool for remote communication and collaboration.</p>
+        <a href="zoom-meeting.php" class="zoom-btn">Start Zoom Meeting Demo</a>
+      </div>
 
-<!-- Why interactive E-Tutor -->
-<div class="tutor py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 d-flex justify-content-center">
-        <h1 class="mb-5"><b><span>Why</span> Interactive E-Tutor?</b></h1>
-      </div>
-      <div class="col-md-6">
-        <h1>"Everything You Can Do in a Classroom, You Can Do with TOTC"</h1>
-        <p>TOTC's school management software helps traditional and online schools manage scheduling,
-          attendance, payments and virtual classrooms all in one secure cloud-based system.</p>
-        <div>
-          <a href="#" class="btn btn-dark">Get Started</a>
-        </div>
-      </div>
-      <div class="col-md-6  position-relative">
-        <div class="ms-5">
-          <img src="assets/images/php" alt="why" class="ms-5 mb-4" height="400px">
-        </div>
+      <!-- Right Image -->
+      <div class="image">
+        <img src="assets/images/zoom.jpg" alt="Zoom Meeting Image">
       </div>
     </div>
-  </div>
-</div>
-
-<!-- Courses -->
-<div class="course py-5">
-  <div class="container">
-    <h1 class="text-center mb-5"><b>Courses</b></h1>
-    <div class="custom-class">
-      <a href="#" class="btn filter-btn btn-dark active me-2" data-filter="all">All</a>
-      <a href="#" class="btn filter-btn" data-filter="html">HTML</a>
-      <a href="#" class="btn filter-btn" data-filter="css">CSS</a>
-      <a href="#" class="btn filter-btn" data-filter="javascript">JAVASCRIPT</a>
-      <a href="#" class="btn filter-btn" data-filter="bootstrap">BOOTSTRAP</a>
-      <a href="#" class="btn filter-btn" data-filter="php">PHP</a>
-      <a href="#" class="btn filter-btn" data-filter="java">JAVA</a>
-    </div>
-
-    <!-- Course Images -->
-    <div class="row d-flex mt-5">
-      <div class="col-lg-2" data-category="bootstrap">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/bootstrap.png" alt="bootstrap" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>Bootstrap</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark text-center border-0 py-2">20$</a>
+    <!-- Testimonials Section -->
+    <section id="testimonial" class="testimonial-section">
+      <div class="container">
+        <h2>What Our Students Say</h2>
+        <div class="row">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card testimonial-card">
+              <img src="assets\images\guy-1.jpg" alt="Student 1">
+              <p>"This platform has transformed the way I learn! The courses are engaging, and I can go at my own pace."</p>
+              <h5>John Doe</h5>
+              <p class="role">Web Developer</p>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card testimonial-card">
+              <img src=" assets\images\guy-2.jpg" alt="Student 2">
+              <p>"I love the variety of courses and the community support. I have learned so much in a short time!"</p>
+              <h5>Jane Smith</h5>
+              <p class="role">Data Scientist</p>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card testimonial-card">
+              <img src="assets\images\guy-3.jpg" alt="Student 3">
+              <p>"The flexibility of learning on this platform is amazing. I can learn whenever and wherever I want."</p>
+              <h5>Samuel Lee</h5>
+              <p class="role">Digital Marketer</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-2" data-category="javascript">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/java-script.png" alt="java-script" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>Javascript</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">30$</a>
+        <!-- Carousel for larger screens -->
+        <div id="testimonialCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Carousel Item 1 -->
+            <div class="carousel-item active">
+              <div class="testimonial-card">
+                <img src="https://via.placeholder.com/80" alt="Student 1">
+                <p>"This platform has transformed the way I learn! The courses are engaging, and I can go at my own pace."</p>
+                <h5>John Doe</h5>
+                <p class="role">Web Developer</p>
+              </div>
+            </div>
+            <!-- Carousel Item 2 -->
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <img src="https://via.placeholder.com/80" alt="Student 2">
+                <p>"I love the variety of courses and the community support. I have learned so much in a short time!"</p>
+                <h5>Jane Smith</h5>
+                <p class="role">Data Scientist</p>
+              </div>
+            </div>
+            <!-- Carousel Item 3 -->
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <img src="https://via.placeholder.com/80" alt="Student 3">
+                <p>"The flexibility of learning on this platform is amazing. I can learn whenever and wherever I want."</p>
+                <h5>Samuel Lee</h5>
+                <p class="role">Digital Marketer</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="php">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/phplogo.png" alt="phplogo" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>PHP</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">50$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="java">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/javalogo.png" alt="javalogo" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>Java</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">40$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="html">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/htmllogo.png" alt="htmllogo" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>HTML</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">35$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="css">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/css-3.png" alt="css-3" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>CSS</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">20$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row d-flex mt-5">
-      <div class="col-lg-2" data-category="java">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/javalogo.png" alt="javalogo" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>Java</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">40$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="php">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/phplogo.png" alt="phplogo" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>PHP</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">40$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="javascript">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/java-script.png" alt="java-script" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>Javascript</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">40$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="css">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/css-3.png" alt="css-3" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>CSS</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">20$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="html">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/htmllogo.png" alt="htmllogo" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>HTML</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">35$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2" data-category="java">
-        <div class="card border-0 shadow">
-          <div class="card-body">
-            <img src="assets/images/javalogo.png" alt="javalogo" class="img-fluid equal-height">
-            <p class="fs-5 py-3 text-center"><b>Java</b></p>
-            <div class="text-center">
-              <a href="#" class="btn btn-dark border-0 px-4 py-2">40$</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Features -->
-<div class="feature py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 py-2 d-flex justify-content-center align-items-center">
-        <h1 class="me-2 text-center"><b><span>Our </span>Features</b></h1>
-      </div>
-      <div class="text-center">
-        <p>This very extraordinary feature, can make learning activities more efficient</p>
-      </div>
-    </div>
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <a href="#"><img src="assets/images/video" alt="" height="300px" class="ms-5 mt-4"></a>
-      </div>
-      <div class="col-md-6 py-5">
-        <h1> Interactive Video Streaming</h1>
-        <p>Engage students with video lessons that pause for quizzes to reinforce learning. If
-          they pass, the video
-          continues; if not, it replays, ensuring active understanding.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="tool py-5 ">
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-6 py-5">
-        <h1><span>Assessment</span> & Interactive Learning Tools</h1>
-        <p class="mt-4">Empower teachers to assign quizzes, homework, and host live Zoom classes for real-time
-          interaction,
-          ensuring students are consistently engaged, evaluated, and supported throughout their learning journey</p>
-      </div>
-      <div class="col-md-6 ">
-        <a href="#"><img src="assets/images/aaq" class="ms-5 " alt="" height="350px"></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- review -->
-<div class="testimonial py-5">
-  <div class="container">
-    <h1 class="text-center"><b>Testimonials</b></h1>
-    <!-- Carousel wrapper -->
-    <div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
-      <!-- Controls -->
-      <div class="d-flex justify-content-center mb-4">
-        <div class="d-flex justify-content-center mb-4">
-          <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
-            <i class="fas fa-chevron-left arrow" aria-hidden="true"></i> <!-- Font Awesome Icon -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
-            <i class="fas fa-chevron-right arrow" aria-hidden="true"></i> <!-- Font Awesome Icon -->
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
       </div>
-      <!-- Inner -->
-      <div class="carousel-inner py-4">
-        <!-- Single item -->
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">Anna Deynah</h5>
-                <p>UX Designer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                  officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                </ul>
-              </div>
+    </section>
+    <!-- Become a Teacher Section -->
+    <section id="becometeacher" class="become-teacher-section">
+      <div class="container">
+        <h2 class="become-teacher-header">Become a Teacher</h2>
+        <p class="text-center mb-5">Are you passionate about teaching? Share your knowledge with students worldwide and make a real difference. It's time to start your teaching journey!</p>
 
-              <div class="col-lg-4 d-none d-lg-block">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">John Doe</h5>
-                <p>Web Developer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                  suscipit laboriosam, nisi ut aliquid commodi.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li>
-                    <i class="fas fa-star-half-alt fa-sm"></i>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-4 d-none d-lg-block">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">Maria Kate</h5>
-                <p>Photographer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                  praesentium voluptatum deleniti atque corrupti.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="far fa-star fa-sm"></i></li>
-                </ul>
-              </div>
+        <div class="row">
+          <!-- Section 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="become-teacher-item">
+              <h3>Share Your Passion</h3>
+              <p>Teach a variety of subjects you're passionate about. Connect with students eager to learn and inspire them with your expertise.</p>
+              <a href="teacher/teacher-registeration.php" class="btn">Apply Now</a>
+            </div>
+          </div>
+          <!-- Section 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="become-teacher-item">
+              <h3>Set Your Own Schedule</h3>
+              <p>Have full control over your teaching schedule. Whether you have a few hours or a few days, you decide when to teach!</p>
+              <a href="teacher/teacher-registeration.php" class="btn">Apply Now</a>
+            </div>
+          </div>
+          <!-- Section 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="become-teacher-item">
+              <h3>Earn Money While You Teach</h3>
+              <p>Start earning income by sharing your knowledge. Set up your courses, and start earning money with every student who enrolls.</p>
+              <a href="teacher/teacher-registeration.php" class="btn">Apply Now</a>
             </div>
           </div>
         </div>
 
-        <!-- Single item -->
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(3).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">John Doe</h5>
-                <p>UX Designer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                  officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                </ul>
-              </div>
-
-              <div class="col-lg-4 d-none d-lg-block">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">Alex Rey</h5>
-                <p>Web Developer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                  suscipit laboriosam, nisi ut aliquid commodi.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li>
-                    <i class="fas fa-star-half-alt fa-sm"></i>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-4 d-none d-lg-block">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">Maria Kate</h5>
-                <p>Photographer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                  praesentium voluptatum deleniti atque corrupti.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="far fa-star fa-sm"></i></li>
-                </ul>
-              </div>
+        <div class="row">
+          <!-- Section 4 -->
+          <div class="col-md-4 mb-4">
+            <div class="become-teacher-item">
+              <h3>Access Comprehensive Resources</h3>
+              <p>Get access to exclusive tools and resources to create high-quality lessons and courses that engage your students.</p>
+              <a href="teacher/teacher-registeration.php" class="btn">Apply Now</a>
             </div>
           </div>
-        </div>
-
-        <!-- Single item -->
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(6).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">Anna Deynah</h5>
-                <p>UX Designer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-                  officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                </ul>
-              </div>
-
-              <div class="col-lg-4 d-none d-lg-block">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">John Doe</h5>
-                <p>Web Developer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                  suscipit laboriosam, nisi ut aliquid commodi.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li>
-                    <i class="fas fa-star-half-alt fa-sm"></i>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-4 d-none d-lg-block">
-                <img class="rounded-circle shadow-1-strong mb-4"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar"
-                  style="width: 150px;" />
-                <h5 class="mb-3">Maria Kate</h5>
-                <p>Photographer</p>
-                <p class="text-muted">
-                  <i class="fas fa-quote-left pe-2"></i>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                  praesentium voluptatum deleniti atque corrupti.
-                </p>
-                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="fas fa-star fa-sm"></i></li>
-                  <li><i class="far fa-star fa-sm"></i></li>
-                </ul>
-              </div>
+          <!-- Section 5 -->
+          <div class="col-md-4 mb-4">
+            <div class="become-teacher-item">
+              <h3>Reach a Global Audience</h3>
+              <p>Expand your reach and share your knowledge with learners from all over the world. Join a global community of instructors!</p>
+              <a href=teacher/teacher-registeration.php" class="btn">Apply Now</a>
+            </div>
+          </div>
+          <!-- Section 6 -->
+          <div class="col-md-4 mb-4">
+            <div class="become-teacher-item">
+              <h3>Grow Your Career</h3>
+              <p>Build your reputation as a top-tier teacher. Grow your audience, earn a consistent income, and develop your career.</p>
+              <a href="teacher/teacher-registeration.php" class="btn">Apply Now</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
-</div>
-
-<!-- Famous Categories -->
-<div class="categorie py-5">
-  <div class="container">
-    <h1 class="text-center"><b><span>Famous</span> Categories</b></h1>
-
-    <div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
-      <!-- Controls -->
-      <div class="d-flex justify-content-center mb-4">
-        <div class="d-flex justify-content-center mb-4">
-          <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
-            <i class="fas fa-chevron-left arrow" aria-hidden="true"></i> <!-- Font Awesome Icon -->
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
-            <i class="fas fa-chevron-right arrow" aria-hidden="true"></i> <!-- Font Awesome Icon -->
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Inner -->
-      <div class="carousel-inner py-4">
-        <!-- Single item -->
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="row">
-              <div class="col-4">
-                <div class="card bg-transparent mx-2">
-                  <img class="card-img-top" src="assets/images/html" alt="HTML">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">HTML Basics</h5>
-                    <p class="card-text">By John Doe</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="btn btn-dark text-decoration-none text-white">Price: $10</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-4">
-                <div class="card bg-transparent mx-2">
-                  <img class="card-img-top" src="assets/images/html" alt="HTML">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">HTML Basics</h5>
-                    <p class="card-text">By John Doe</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="btn btn-dark text-decoration-none text-white">Price: $10</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-4">
-                <div class="card bg-transparent mx-2">
-                  <img class="card-img-top" src="assets/images/html" alt="HTML">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">HTML Basics</h5>
-                    <p class="card-text">By John Doe</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="btn btn-dark text-decoration-none text-white">Price: $10</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single item -->
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-4">
-                <div class="card bg-transparent mx-2">
-                  <img class="card-img-top" src="assets/images/html" alt="HTML">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">HTML Basics</h5>
-                    <p class="card-text">By John Doe</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="btn btn-dark text-decoration-none text-white">Price: $10</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-4">
-                <div class="card bg-transparent mx-2">
-                  <img class="card-img-top" src="assets/images/html" alt="HTML">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">HTML Basics</h5>
-                    <p class="card-text">By John Doe</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="btn btn-dark text-decoration-none text-white">Price: $10</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-4">
-                <div class="card bg-transparent mx-2">
-                  <img class="card-img-top" src="assets/images/html" alt="HTML">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">HTML Basics</h5>
-                    <p class="card-text">By John Doe</p>
-                    <span class="mb-3">
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                      <i class="bi bi-star-fill" style="color: gold;"></i>
-                    </span>
-                    <div class="mt-auto">
-                      <a href="#" class="btn btn-dark text-decoration-none text-white">Price: $10</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-<!-- Become a teacher -->
-<div class="teacher py-5">
-  <div class="container">
-    <h2 class="mb-4 text-center"><b><span>Become</span> a Teacher</b></h2>
-    <h5 class="text-center mb-2">Share Your Knowledge, Inspire the Future</h5>
-    <p class="text-center mb-5">
-      Join our community of educators and start making an impact by sharing your expertise.
-      Whether you’re a professional in coding, design, or any field, TOTC makes it easy
-      for you to create and manage courses, reach eager learners, and earn from your passion.
-    </p>
+  <!-- scroll to top -->
+  <?php include 'includes/scroll-top-btn.php' ?>
+  <!-- right sidebar -->
+  <?php include 'includes/right-side-bar.php' ?>
+  <!-- footer -->
+  <?php include 'includes/footer.php' ?>
+  <?php include 'includes/js-links.php' ?>
 
-    <!-- Why Teach with Us? -->
-    <div class="row">
-      <div class="col-md-3">
-        <div class="card bg-transparent border-0">
-          <div class="card-body">
-            <h5 class="card-title"><b>Flexible Schedule</b></h5>
-            <p>Teach anytime, anywhere.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card bg-transparent border-0">
-          <div class="card-body">
-            <h5 class="card-title"><b>Earn Extra Income</b></h5>
-            <p>Get paid for every enrollment.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card bg-transparent border-0">
-          <div class="card-body" style="padding-bottom: 0px;">
-            <h5 class="card-title"><b>Global Reach</b></h5>
-            <p>Connect with students worldwide.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card bg-transparent border-0">
-          <div class="card-body" style="padding-bottom: 0px;">
-            <h5 class="card-title"><b>Simple Tools</b></h5>
-            <p>Course creation tools and support.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Initialize Swiper -->
 
-    <!-- Call to Action Button -->
-    <div class="d-flex justify-content-center mt-4">
-      <a href="#" class="btn btn-dark text-decoration-none  px-4 py-2">Start Teaching Today</a>
-    </div>
-  </div>
-</div>
+</body>
 
-<!-- footer -->
-<?php include 'includes/footer.php' ?>
-
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/custom.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('[data-category]');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-
-        const filterValue = this.getAttribute('data-filter');
-
-        // Show or hide items based on the selected filter
-        galleryItems.forEach(item => {
-          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-            item.classList.remove('d-none'); // Show item
-            item.classList.add('d-flex');   // Ensure flex alignment
-          } else {
-            item.classList.add('d-none');   // Hide item
-            item.classList.add('d-flex'); // Remove flex alignment
-          }
-        });
-      });
-    });
-  });
-</script>
+</html>

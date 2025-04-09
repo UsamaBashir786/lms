@@ -1,10 +1,20 @@
-<?php include 'includes/header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <?php require_once 'includes/css-links.php' ?>
+</head>
+
+<body>
+
+
+  <?php include 'includes/header.php'; ?>
+  <div class="mt-5">&nbsp;</div>
   <div class="about">
     <div class="container my-5">
       <section class="text-center">
-        <h1>About Interactive E-Tutor</h1>
-        <p class="lead mt-4">
+        <h1 class="text-dark">About Interactive E-Tutor</h1>
+        <p class="lead mt-4 text-dark">
           At <strong>Interactive E-Tutor</strong>, we believe in empowering students with innovative and interactive learning experiences. Our platform integrates engaging video lessons, real-time quizzes, and live classes to enhance learning outcomes and keep students motivated.
         </p>
       </section>
@@ -77,3 +87,7 @@
 
   <!-- Footer -->
   <?php include 'includes/footer.php'; ?>
+  <?php include 'includes/js-links.php'; ?>
+</body>
+
+</html>

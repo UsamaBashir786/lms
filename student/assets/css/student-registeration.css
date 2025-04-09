@@ -1,0 +1,121 @@
+:root {
+  --primary-color: green;
+  --background-color: #f8f9fa;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.banner {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),url("../assets/images/banner1.png"); */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+}
+
+.form-section,
+.instructions-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.form-section button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.form-section button:hover {
+  background-color: darkgoldenrod;
+}
+
+/* Customizing input fields */
+input.form-control,
+select.form-select,
+textarea.form-control {
+  border: 1pxx solid #f39c12;
+  /* Golden border */
+  border-radius: 8px;
+  /* Rounded corners */
+  /* background-color: #fdf9f3; */
+  /* Light beige background */
+  color: #333;
+  /* Dark text */
+  font-size: 16px;
+  /* Larger font */
+  padding: 12px;
+  /* Spacing inside input */
+  transition: all 0.3s ease;
+  /* Smooth hover/focus effects */
+}
+
+/* Input hover effect */
+input.form-control:hover,
+select.form-select:hover,
+textarea.form-control:hover {
+  border-color: green;
+  /* Slightly darker border */
+  /* background-color: #fbf4e5; */
+  /* Lighter beige */
+}
+
+/* Input focus effect */
+input.form-control:focus,
+select.form-select:focus,
+textarea.form-control:focus {
+  outline: none;
+  border-color: green;
+  /* Highlighted border color */
+  box-shadow: 0 0 6px rgba(127, 243, 18, 0.5);
+  /* Glow effect */
+}
+
+/* Placeholder customization */
+input.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: #999;
+  /* Gray placeholder */
+  font-style: italic;
+  /* Italicized */
+}
+
+/* Disabled input styling */
+input.form-control:disabled,
+select.form-select:disabled,
+textarea.form-control:disabled {
+  background-color: #f0f0f0;
+  /* Gray background */
+  color: #aaa;
+  /* Light gray text */
+  border-color: #ccc;
+  /* Light gray border */
+}
+
+.btn-success {
+  background-color: green !important;
+  border: 0px;
+  border-radius: 0px;
+  width: 100%;
+  font-size: 20px !important;
+}
+.go-back {
+  background-color: green;
+  color: white;
+  border: 0px;
+  border-radius: 0px;
+}
+.go-back:hover {
+  /* color: rgb(77, 70, 70); */
+  background-color: green;
+}

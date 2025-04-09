@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Center the form within the page */
+form {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Form labels */
+.form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Input fields */
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  /* border-radius: 6px; */
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Focus effect for inputs */
+.form-control:focus,
+.form-select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* File input */
+#profile-img {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Button Styles */
+.btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  /* border-radius: 6px; */
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+/* Image Preview */
+#img-preview {
+  margin-top: 20px;
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 200px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 320px) {
+  .siderbar{
+    overflow-x: hidden !important;
+  }
+  .form-control,
+  .form-select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Ensure button is full-width on small screens */
+  .form-control,
+  .form-select {
+    padding: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Error and Success messages */
+.form-control:invalid {
+  border-color: #dc3545;
+}
+
+.form-control:valid {
+  border-color: #28a745;
+}

@@ -1,85 +1,116 @@
-<div class="footer">
+<footer class="footer">
   <div class="container">
     <div class="row">
-      <!-- Column 1: Logo and description -->
-      <div class="col-md-3 mt-5">
-        <div>
-          <img src="/assets/images/logo.png" alt="logo" height="70">
-          <ul class="list-unstyled d-flex align-items-center py-4">
-            <li class="d-flex align-items-center">
-              <i class="me-2"><img src="/assets/images/call2.png" alt="call" width="24"></i>
-              <a href="tel: (123) 456-7890" class="text-decoration-none text-dark">(123) 456-7890</a>
-            </li>
-          </ul>
-          <ul class="list-unstyled d-flex align-items-center mb-4">
-            <li class="d-flex align-items-center">
-              <i class="me-2"><img src="/assets/images/mail2.png" alt="call" width="24"></i>
-              <a href="email: info@elearning.cc" class="text-decoration-none text-dark">info@elearning.cc</a>
-            </li>
-          </ul>
-          <ul class="list-unstyled d-flex align-items-center m-0">
-            <li class="d-flex align-items-center">
-              <a href="#"><i class="bi bi-facebook fs-4 me-4" style="color: #3b5998;"></i></a>
-              <a href="#"><i class="bi bi-twitter fs-4 me-4" style="color: #1DA1F2;"></i></a>
-              <a href="#"><i class="bi bi-youtube fs-4" style="color: #FF0000;"></i> </a>
-
-            </li>
-          </ul>
-        </div>
+      <!-- Logo and Contact -->
+      <div class="col-md-4 footer-section">
+        <div class="footer-logo">E-Learning</div>
+        <p><strong>Call:</strong> <a href="tel:1234567890">(123) 456-7890</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@elearning.cc">info@elearning.cc</a></p>
       </div>
 
-      <!-- Column 2: Courses List -->
-      <div class="col-md-3 py-5">
-        <ul class="list-unstyled ms-5 ">
-          <a href="#" class="text-decoration-none text-dark">
-            <li class="mb-2">HTML</li>
-          </a>
-          <a href="#" class="text-decoration-none text-dark">
-            <li class="mb-2">CSS</li>
-          </a>
-          <a href="#" class="text-decoration-none text-dark">
-            <li class="mb-2">Bootstrap</li>
-          </a>
-          <a href="#" class="text-decoration-none text-dark">
-            <li class="mb-2">PHP</li>
-          </a>
-          <a href="#" class="text-decoration-none text-dark">
-            <li class="mb-2">React</li>
-          </a>
-          <a href="#" class="text-decoration-none text-dark">
-            <li class="mb-2">XML</li>
-          </a>
+      <!-- Links -->
+      <div class="col-md-4 footer-section">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">Bootstrap</a></li>
+          <li><a href="#">PHP</a></li>
+          <li><a href="#">React</a></li>
+          <li><a href="#">XML</a></li>
         </ul>
       </div>
 
-      <!-- Column 3: Some additional content -->
-      <div class="col-md-3 py-3">
-        <ul class="mt-4 ">
-          <li class="mb-2 list-unstyled"><a href="#" class=" text-decoration-none text-dark">Help Desk</a></li>
-          <li class="mb-2 list-unstyled"><a href="#" class="text-decoration-none text-dark">About Us</a></li>
-          <li class="mb-2 list-unstyled"><a href="#" class="text-decoration-none text-dark">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Another section of additional content -->
-      <div class="col-md-3 py-3">
-        <ul class="mt-4 ">
-          <li class="mb-2 list-unstyled"><a href="#" class="text-decoration-none text-dark">Legal Concerns</a></li>
-          <li class="mb-2 list-unstyled"><a href="#" class="text-decoration-none text-dark">Private Policy</a></li>
-          <li class="mb-2 list-unstyled"><a href="#" class="text-decoration-none text-dark">Trems & Conditions</a></li>
+      <!-- Help and Legal -->
+      <div class="col-md-4 footer-section">
+        <h5>Support & Legal</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Help Desk</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Legal Concerns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
         </ul>
       </div>
     </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024. All rights reserved.</p>
+    </div>
   </div>
-</div>
-<div class="col-md-12 bg-secondary text-center">
-  <div class="text-white py-3">
-    Copyright &copy; 2024. All right reserved
-  </div>
-</div>
+</footer>
 
-<!-- Bootstrap JS link -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+<style>
+  :root {
+    --hover-color: var(--primary-color) ;  /* Hover effect color */
+  }
 
-</html>
+  .footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url('assets/images/background-contact.jpg') center/cover no-repeat;
+    color: #f8f9fa;
+    padding: 40px 0;
+  }
+
+  .footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+  }
+
+  .footer .footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  .footer .footer-logo:hover {
+    color: var(--hover-color);
+  }
+
+  .footer-section h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #f8f9fa;
+  }
+
+  .footer-section ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul li a {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-section {
+      margin-bottom: 30px;
+    }
+    .footer-logo {
+      font-size: 24px;
+    }
+  }
+</style>

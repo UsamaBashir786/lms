@@ -1,0 +1,69 @@
+:root {
+  --primary-color: #006633;
+  --secondary-color: #006633;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --white-color: #ffffff;
+  --border-radius: 8px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+  --font-size-base: 16px;
+  --font-size-lg: 1.5rem;
+  --font-size-sm: 0.875rem;
+  --transition: all 0.3s ease-in-out;
+  --input-border-color: #ccc;
+  --input-focus-border-color: #006633;
+  --btn-hover-bg-color: #006633;
+  --btn-hover-text-color: #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+}
+
+.heading {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+
+.sub-heading {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.features-section {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  color: var(--primary-color);
+}
+
+.courses-section .card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.courses-section .card:hover {
+  transform: scale(1.05);
+}
+
+.start-learning-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.start-learning-btn:hover {
+  background-color: var(--btn-hover-bg-color);
+  color: var(--btn-hover-text-color);
+}

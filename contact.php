@@ -1,94 +1,64 @@
-<?php include 'includes/header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
 
-  <!-- Contact Us -->
-  <div class="contact">
-    <div class="banner">
-      <div class="content">
-        <h1 class="text-center">Contact Information</h1>
-        <p class="mt-3 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quo voluptatibus <br> nesciunt consequatur libero modi deserunt id cum assumenda rerum.</p>
-      </div>
-    </div>
+<head>
+  <?php include 'includes/css-links.php' ?>
+  <link rel="stylesheet" href="assets/css/contact-css.css">
+</head>
+
+<body>
+  <!-- Banner Section -->
+  <div class="banner">
+    <h1>Contact Us <br>
+      <a href="index.php" class="btn custom-btn text-white" style="background-color: #0056b3;">Go Back</a>
+    </h1>
   </div>
 
-  <!-- Info -->
-  <div class="info py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="card bg-white border-0 rounded-0 mb-4 py-2">
-            <div class="card-body">
-              <ul class="list-unstyled d-flex align-items-center m-0">
-                <li class="d-flex align-items-center">
-                  <i class="me-2"><img src="/assets/images/call2.png" alt="call" width="24"></i>
-                  <a href="tel: (123) 456-7890" class="text-decoration-none text-dark">(123) 456-7890</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card bg-white border-0 rounded-0 mb-4 py-2">
-            <div class="card-body">
-              <ul class="list-unstyled d-flex align-items-center m-0">
-                <li class="d-flex align-items-center">
-                  <i class="me-2"><img src="/assets/images/mail2.png" alt="call" width="24"></i>
-                  <a href="email: info@elearning.cc" class="text-decoration-none text-dark">info@elearning.cc</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card bg-white border-0 rounded-0 py-2">
-            <div class="card-body">
-              <ul class="list-unstyled d-flex align-items-center m-0">
-                <li class="d-flex align-items-center">
-                  <i class="me-2"><img src="/assets/images/location.png" alt="call" width="24"></i>
-                  <p class="d-flex align-items-center m-0">111 karbala road Sahiwal Pakistan</p>
-                </li>
-              </ul>
-            </div>
-          </div>
+  <!-- Main Content Section -->
+  <div class="container custom-container">
+    <div class="row">
+      <!-- Contact Information Area -->
+      <div class="col-md-6">
+        <div class="feature-container">
+          <h2>Get In Touch</h2>
+          <p>We'd love to hear from you! Whether you have a question, feedback, or need support, feel free to reach out.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-phone-alt"></i> Call us at: +1234567890</li>
+            <li><i class="fas fa-envelope"></i> Email us at: contact@company.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Visit us: 123 Company Street, City, Country</li>
+          </ul>
         </div>
-        <div class="col-8">
-          <div class="card border-0 rounded-0 bg-white">
-            <div class="card-body" style="padding: 20px;">
-              <h5><b>Send Message</b></h5>
-              <form method="post" action="">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="mb-3">
-                      <input type="name" name="name" class="form-control" id="name" placeholder="Your name" required>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="mb-3">
-                      <input type="email" name="email" class="form-control" id="email" placeholder="Email address" required>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <div class="mb-3">
-                      <input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone no" required>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="mb-3">
-                      <input type="subject" name="subject" class="form-control" id="subject" placeholder="Subject" required>
-                    </div>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <textarea class="form-control" id="message" name="message" placeholder="Message" rows="3" required></textarea>
-                </div>
-                <div class=" mb-2">
-                  <a href="#" class="btn btn-dark rounded-0 pe-3 ps-3 py-2">Send Message</a>
-                </div>
-              </form>
+      </div>
+
+      <!-- Contact Form Area -->
+      <div class="col-md-6">
+        <div class="form-section">
+          <h2>Send us a Message</h2>
+          <form id="contactForm">
+            <div>
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" placeholder="Enter your full name" required>
             </div>
-          </div>
+            <div>
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+              <label for="message" class="form-label">Your Message</label>
+              <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
+  <?php include 'includes/footer.php' ?>
+  <?php include 'includes/js-links.php' ?>
 
+  <!-- Form Validation -->
+  <script src="assets/js/contact.js"></script>
+</body>
 
-  <?php include 'includes/footer.php'; ?>
+</html>

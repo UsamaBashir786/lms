@@ -2,18 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms and Conditions</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/term.css ">
+  <?php include 'includes/css-links.php' ?>
+  <link rel="stylesheet" href="assets/css/terms.css">
 </head>
 
 <body>
-  
-  <!-- header -->
-  <?php include 'includes/header.php' ?>
 
+  <!-- header -->
+
+  <?php include 'includes/header.php'; ?>
   <div class="container terms-container my-5">
     <h1 class="pt-5">Terms and Conditions</h1>
     <p>Welcome to [Website Name]! These terms and conditions outline the rules and regulations for the use of
@@ -59,12 +56,9 @@
       Phone: [Your Phone Number]</p>
   </div>
 
- <!-- footer -->
- <? include 'includes/footer.php' ?> 
-
-  <!-- Bootstrap JS link -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- footer -->
+  <?php include 'includes/footer.php'; ?>
+  <?php include 'includes/js-links.php' ?>
 </body>
 
 </html>
-

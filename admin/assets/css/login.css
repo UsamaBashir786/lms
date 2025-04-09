@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #198754;
+  --primary-hover: #157347;
+  --secondary-color: #6c757d;
+  --text-color: #212529;
+  --light-color: #f8f9fa;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-color);
+  min-height: 100vh;
+}
+
+/* Top Banner */
+.top-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/assets//images/background-contact.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 6rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.login-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin-top: -3rem;
+  z-index: 10;
+  background-color: white;
+  padding: 2rem;
+}
+
+.login-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.form-floating>label {
+  color: var(--secondary-color);
+}
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label {
+  color: var(--primary-color);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.footer {
+  color: var(--secondary-color);
+  margin-top: 1.5rem;
+}
+
+/* Animation */
+.login-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .top-banner {
+    padding: 4rem 0;
+  }
+
+  .login-card {
+    margin-top: -2rem;
+  }
+}

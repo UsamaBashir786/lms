@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  /* Adds a casual font */
+  margin: 0;
+  padding: 0;
+  background-color: #f7fafc;
+  /* Slightly lighter, softer background */
+}
+
+h3 {
+  color: #444;
+  font-weight: bold;
+  /* Slight emphasis */
+}
+
+h4 {
+  color: #666;
+  font-style: italic;
+  /* Informal touch */
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  /* Rounded corners for a friendly look */
+  font-size: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+  margin: 10px 0;
+}
+
+button {
+  background-color: #ff9800;
+  /* Warmer, inviting color */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition */
+}
+
+button:hover {
+  background-color: #e68900;
+  transform: scale(1.05);
+  /* Slightly enlarges on hover */
+}
+
+/* Layout and Containers */
+form {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#checkpointContainer {
+  margin-bottom: 25px;
+}
+
+.checkpoint {
+  background-color: #fefae0;
+  /* Warm beige tone */
+  padding: 15px;
+  margin: 12px 0;
+  border: 1px solid #ecd9a9;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.mcq {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f1f5fc;
+  /* Cool light blue tone */
+  border-radius: 6px;
+  border: 1px solid #dce1f0;
+}
+
+.mcq input,
+.mcq select {
+  width: 48%;
+  display: inline-block;
+  margin-right: 4%;
+  border-radius: 6px;
+}
+
+.mcq input:last-child,
+.mcq select:last-child {
+  margin-right: 0;
+}
+
+/* Button Style */
+button[type="button"] {
+  background-color: #2196f3;
+  /* Bright blue tone */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 12px;
+}
+
+button[type="button"]:hover {
+  background-color: #1769aa;
+  transform: scale(1.05);
+}
+.d-inline {
+  display: inline;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.time-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.time-input {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.time-input::-webkit-inner-spin-button,
+.time-input::-webkit-outer-spin-button {
+  opacity: 1;
+}

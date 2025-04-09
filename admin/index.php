@@ -1,83 +1,79 @@
-<?php require_once 'header.php' ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Sidebar -->
+<head>
+  <?php include 'includes/head.php' ?>
+</head>
 
-<?php require_once 'sidebar.php' ?>
+<body>
+  <?php include 'includes/sidebar.php' ?>
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <!-- Header -->
+    <div class="bg-success text-white p-4 mb-4 rounded">
+      <h2 class="mb-0">Dashboard Overview</h2>
+    </div>
 
-<div class="col-lg-10">
-  <div class="main-content py-5 d-flex align-items-center justify-content-center">
-    <div class="container">
-      <div class="row gx-5">
-        <!-- Widget 1 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-body py-1">
-              <h5 class="card-title text-start">Teachers</h5>
-              <p class="text-end">100</p>
-            </div>
-          </div>
-        </div>
-        <!-- Widget 2 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-body py-1">
-              <h5 class="card-title text-start">Students</h5>
-              <p class="text-end">200</p>
-            </div>
-          </div>
-        </div>
-        <!-- Widget 3 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-body py-1">
-              <h5 class="card-title text-start">Users</h5>
-              <p class="text-end">350</p>
-            </div>
-          </div>
-        </div>
-        <!-- Widget 4 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card">
-            <div class="card-body py-1">
-              <h5 class="card-title text-start">Comments</h5>
-              <p class="text-end">40</p>
-            </div>
-          </div>
-        </div>
-        <!-- Widget 5 -->
-        <div class="col-md-6 col-lg-3 mt-3">
-          <div class="card">
-            <div class="card-body py-1">
-              <h5 class="card-title text-satrt">Courses</h5>
-              <p class="text-end">30</p>
-            </div>
-          </div>
-        </div>
-        <!-- Widget 6 -->
-        <div class="col-md-6 col-lg-3 mt-3">
-          <div class="card">
-            <div class="card-body py-1">
-              <h5 class="card-title text-start">Quizes</h5>
-              <p class="text-end">25</p>
-            </div>
-          </div>
+    <!-- Dashboard Cards -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card stat-card">
+          <h5 class="card-title">Total Students</h5>
+          <div class="stat-number">200</div>
+          <button class="btn btn-primary" onclick="location.href='#students'">
+            <i class="fas fa-eye me-2"></i>View Students
+          </button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-6 py-3">
-          <div class="graph1">
-            <img src="/admin/assets/images/graph2c.png" alt="png">
-          </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card stat-card">
+          <h5 class="card-title">Total Users</h5>
+          <div class="stat-number">350</div>
+          <button class="btn btn-primary" onclick="location.href='#users'">
+            <i class="fas fa-eye me-2"></i>View Users
+          </button>
         </div>
-        <div class="col-6 py-3">
-          <div class="graph2">
-            <img src="/admin/assets/images/graph2c.png" alt="png">
-          </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card stat-card">
+          <h5 class="card-title">Total Comments</h5>
+          <div class="stat-number">40</div>
+          <button class="btn btn-primary" onclick="location.href='#comments'">
+            <i class="fas fa-eye me-2"></i>View Comments
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card stat-card">
+          <h5 class="card-title">Total Courses</h5>
+          <div class="stat-number">30</div>
+          <button class="btn btn-primary" onclick="location.href='#courses'">
+            <i class="fas fa-cog me-2"></i>Manage Courses
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card stat-card">
+          <h5 class="card-title">Total Quizzes</h5>
+          <div class="stat-number">25</div>
+          <button class="btn btn-primary" onclick="location.href='#quizzes'">
+            <i class="fas fa-cog me-2"></i>Manage Quizzes
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card stat-card">
+          <h5 class="card-title">Total Teachers</h5>
+          <div class="stat-number">100</div>
+          <button class="btn btn-primary" onclick="location.href='#teachers'">
+            <i class="fas fa-eye me-2"></i>View Teachers
+          </button>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-</div>
-<?php require_once 'footer.php'; ?>
+
+<?php include 'includes/js-links.php' ?>
+</body>
+
+</html>

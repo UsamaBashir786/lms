@@ -1,0 +1,295 @@
+:root {
+  --primary-color: #006633;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --banner-height: 300px;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Banner section styles */
+.banner {
+  height: var(--banner-height);
+  /* background: url('https://via.placeholder.com/1920x300') no-repeat center center; */
+  /* background: url('/assets/images/background-contact.jpg') no-repeat center center; */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Container styles */
+.container {
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* Row layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-6 {
+  width: 48%;
+  margin-bottom: 30px;
+}
+
+/* Form section styles */
+.form-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.form-section:hover {
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.form-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+}
+
+.form-section label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s;
+}
+
+.form-section input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Button styles */
+.form-section button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.form-section button:hover {
+  background-color: #008cba;
+}
+
+/* List styling */
+.form-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Main container styling */
+.feature-container {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s ease;
+}
+
+/* Title styling */
+.feature-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Paragraph text styling */
+.feature-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* List styling */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List item styling */
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Icon styling */
+.feature-list li i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on icons */
+.feature-list li:hover i {
+  color: #0056b3;
+}
+
+/* Hover effect on list items */
+.feature-list li:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+.go-back {
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: lighter;
+  padding: 10px;
+  border: 0px;
+  border-radius: 0px;
+}
+.go-back:hover {
+  /* color: rgb(77, 70, 70); */
+  background-color: green;
+}
+/* Alert Styles */
+.alert {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.alert-error {
+  background-color: #f44336;
+  color: white;
+  border: 1px solid #f44336;
+}
+
+.alert-warning {
+  background-color: #ff9800;
+  color: white;
+  border: 1px solid #ff9800;
+}
+    /* Global styles for the toaster */
+    .toast-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Base styles for a toast notification */
+    .toast {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      position: relative;
+    }
+
+    /* Styles for success, error, warning, and info types */
+    .toast.success {
+      background-color: #4CAF50;
+    }
+
+    .toast.error {
+      background-color: #F44336;
+    }
+
+    .toast.warning {
+      background-color: #FF9800;
+    }
+
+    .toast.info {
+      background-color: #2196F3;
+    }
+
+    /* Close button styling */
+    .toast button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+
+    .toast button:hover {
+      color: #ccc;
+    }
+
+    /* When the toast is visible */
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
