@@ -38,11 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Handle checkpoints and MCQs
   foreach ($_POST['checkpoints'] as $checkpoint) {
-    // Convert minutes and seconds to total seconds
     $minutes = isset($checkpoint['minutes']) ? (int)$checkpoint['minutes'] : 0;
     $seconds = isset($checkpoint['seconds']) ? (int)$checkpoint['seconds'] : 0;
     $time_in_seconds = ($minutes * 60) + $seconds;
-
     $content = $checkpoint['content'];
 
     // Insert checkpoint
@@ -62,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $correct_option = $mcq['correct_option'];
 
       $sql_mcq = "INSERT INTO mcqs (checkpoint_id, question, option_a, option_b, option_c, option_d, correct_option) 
-                        VALUES (?, ?, ?, ?, ?, ?, ?)";
+                  VALUES (?, ?, ?, ?, ?, ?, ?)";
       $stmt_mcq = $conn->prepare($sql_mcq);
       $stmt_mcq->bind_param("issssss", $checkpoint_id, $question, $option_a, $option_b, $option_c, $option_d, $correct_option);
       $stmt_mcq->execute();
@@ -87,13 +85,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
   <?php include 'includes/sidebar.php' ?>
 
-
   <div class="main-content">
     <div class="main-header">
       <h1>Welcome, <?php echo htmlspecialchars($fullName); ?></h1>
       <div class="user-dropdown">
         <button class="text-white">
-          <?php echo htmlspecialchars($fullName); ?> &nbsp;
+          <?php echo htmlspecialchars($fullName); ?>  
           <i class="fa fa-arrow-down"></i>
         </button>
         <div class="dropdown-content">
@@ -107,10 +104,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <form action="upload-course.php" method="POST" enctype="multipart/form-data">
         <input type="text" name="video_title" placeholder="Video Title" required>
 
-        <h3 class="d-inline">&nbsp;Video</h3>
+        <h3 class="d-inline"> Video</h3>
         <input type="file" name="video" accept="video/*" required>
 
-        <h3 class="d-inline">&nbsp;Thumbnail</h3>
+        <h3 class="d-inline"> Thumbnail</h3>
         <input type="file" name="thumbnail" accept="image/*" required>
 
         <h3>Checkpoints</h3>
@@ -137,11 +134,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </select>
               </div>
             </div>
+            <button type="button" onclick="addMCQ(0)">Add MCQ</button>
           </div>
         </div>
 
         <button type="button" id="addCheckpoint">Add Another Checkpoint</button>
-        <button type="button" onclick="addMCQ(0)">Add MCQ</button>
         <button type="submit">Submit</button>
       </form>
     </div>
@@ -153,31 +150,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     document.getElementById('addCheckpoint').addEventListener('click', function() {
       let checkpointHTML = `
-                <div class="checkpoint" id="checkpoint-${checkpointCounter}">
-                    <div class="time-inputs">
-                        <input type="number" name="checkpoints[${checkpointCounter}][minutes]" placeholder="Minutes" min="0" class="time-input" required>
-                        <input type="number" name="checkpoints[${checkpointCounter}][seconds]" placeholder="Seconds" min="0" max="59" class="time-input" required>
-                    </div>
-                    <textarea name="checkpoints[${checkpointCounter}][content]" placeholder="Checkpoint Content"></textarea>
-                    <h4>MCQs</h4>
-                    <div class="mcqs-container" id="mcqs-container-${checkpointCounter}">
-                        <div class="mcq" id="mcq-${checkpointCounter}-0">
-                            <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][question]" placeholder="Question">
-                            <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][option_a]" placeholder="Option A">
-                            <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][option_b]" placeholder="Option B">
-                            <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][option_c]" placeholder="Option C">
-                            <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][option_d]" placeholder="Option D">
-                            <select name="checkpoints[${checkpointCounter}][mcqs][0][correct_option]">
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                            </select>
-                            <button type="button" onclick="addMCQ(${checkpointCounter})">Add MCQ</button>
-                        </div>
-                    </div>
-                </div>
-            `;
+        <div class="checkpoint" id="checkpoint-${checkpointCounter}">
+          <div class="time-inputs">
+            <input type="number" name="checkpoints[${checkpointCounter}][minutes]" placeholder="Minutes" min="0" class="time-input" required>
+            <input type="number" name="checkpoints[${checkpointCounter}][seconds]" placeholder="Seconds" min="0" max="59" class="time-input" required>
+          </div>
+          <textarea name="checkpoints[${checkpointCounter}][content]" placeholder="Checkpoint Content"></textarea>
+          <h4>MCQs</h4>
+          <div class="mcqs-container" id="mcqs-container-${checkpointCounter}">
+            <div class="mcq" id="mcq-${checkpointCounter}-0">
+              <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][question]" placeholder="Question">
+              <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][option_a]" placeholder="Option A">
+              <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][option_b]" placeholder="Option B">
+              <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][option_c]" placeholder="Option C">
+              <input type="text" name="checkpoints[${checkpointCounter}][mcqs][0][option_d]" placeholder="Option D">
+              <select name="checkpoints[${checkpointCounter}][mcqs][0][correct_option]">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" onclick="addMCQ(${checkpointCounter})">Add MCQ</button>
+        </div>
+      `;
       document.getElementById('checkpointContainer').insertAdjacentHTML('beforeend', checkpointHTML);
       mcqCounter.push(1);
       checkpointCounter++;
@@ -186,26 +183,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     function addMCQ(checkpointId) {
       let mcqId = mcqCounter[checkpointId]++;
       let mcqHTML = `
-                <div class="mcq" id="mcq-${checkpointId}-${mcqId}">
-                    <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][question]" placeholder="Question">
-                    <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][option_a]" placeholder="Option A">
-                    <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][option_b]" placeholder="Option B">
-                    <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][option_c]" placeholder="Option C">
-                    <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][option_d]" placeholder="Option D">
-                    <select name="checkpoints[${checkpointId}][mcqs][${mcqId}][correct_option]">
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                    </select>
-                    <button type="button" onclick="removeMCQ(${checkpointId}, ${mcqId})">Remove MCQ</button>
-                </div>
-            `;
+        <div class="mcq" id="mcq-${checkpointId}-${mcqId}">
+          <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][question]" placeholder="Question">
+          <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][option_a]" placeholder="Option A">
+          <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][option_b]" placeholder="Option B">
+          <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][option_c]" placeholder="Option C">
+          <input type="text" name="checkpoints[${checkpointId}][mcqs][${mcqId}][option_d]" placeholder="Option D">
+          <select name="checkpoints[${checkpointId}][mcqs][${mcqId}][correct_option]">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+          </select>
+          <button type="button" onclick="removeMCQ(${checkpointId}, ${mcqId})">Remove MCQ</button>
+        </div>
+      `;
       document.getElementById(`mcqs-container-${checkpointId}`).insertAdjacentHTML('beforeend', mcqHTML);
     }
 
     function removeMCQ(checkpointId, mcqId) {
       document.getElementById(`mcq-${checkpointId}-${mcqId}`).remove();
+      mcqCounter[checkpointId]--;
     }
   </script>
 </body>
