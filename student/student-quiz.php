@@ -53,7 +53,7 @@ if ($result_all_checkpoints->num_rows > 0) {
   }
 }
 
-// Fetch ALL MCQs
+// Fetch ALL MCQs - Modified to get all MCQs without grouping by checkpoint
 $all_mcqs = [];
 $sql_all_mcqs = "SELECT m.mcq_id, m.checkpoint_id, m.question, m.option_a, m.option_b, m.option_c, m.option_d, m.correct_option, c.video_id 
                 FROM mcqs m 
@@ -62,14 +62,11 @@ $result_all_mcqs = $conn->query($sql_all_mcqs);
 
 if ($result_all_mcqs->num_rows > 0) {
   while ($row = $result_all_mcqs->fetch_assoc()) {
-    if (!isset($all_mcqs[$row['checkpoint_id']])) {
-      $all_mcqs[$row['checkpoint_id']] = [];
-    }
-    $all_mcqs[$row['checkpoint_id']][] = $row;
+    $all_mcqs[] = $row; // Store all MCQs in a flat array
   }
 }
 
-// NEW: Fetch completed checkpoints for the student
+// Fetch completed checkpoints for the student
 $completed_checkpoints = [];
 $sql_completed_checkpoints = "SELECT checkpoint_id FROM completed_checkpoints WHERE student_id = ?";
 $stmt = $conn->prepare($sql_completed_checkpoints);
@@ -218,8 +215,8 @@ while ($row = $result_completed_checkpoints->fetch_assoc()) {
     const allVideosData = <?= json_encode($videos) ?>;
     const completedVideosData = <?= json_encode(array_map('intval', $completed_videos)) ?>;
     const allCheckpointsData = <?= json_encode($all_checkpoints) ?>;
-    const allMcqsData = <?= json_encode($all_mcqs) ?>;
-    // NEW: Pre-populated completed checkpoints from database
+    const allMcqsData = <?= json_encode($all_mcqs) ?>; // This is now a flat array of all MCQs
+    // Pre-populated completed checkpoints from database
     const completedCheckpointsData = <?= json_encode(array_map('intval', $completed_checkpoints)) ?>;
 
     // Element references
@@ -249,6 +246,7 @@ while ($row = $result_completed_checkpoints->fetch_assoc()) {
     });
     let totalQuestions = 0;
     let correctAnswers = 0;
+    let currentQuizQuestions = []; // To keep track of the current quiz questions being displayed
 
     // Initialize the player when the page loads
     window.onload = function() {
@@ -256,8 +254,18 @@ while ($row = $result_completed_checkpoints->fetch_assoc()) {
       debug("Current video ID: " + currentVideoId);
       debug("Completed checkpoints: " + JSON.stringify(completedCheckpoints));
 
-      // Find the current video in our data
+      // Find the current video in our data - log all video IDs for debugging
+      debug("All video IDs: " + allVideosData.map(v => v.video_id).join(", "));
+      debug("Looking for video ID: " + currentVideoId);
+      
       let currentVideo = allVideosData.find(video => parseInt(video.video_id) === parseInt(currentVideoId));
+      
+      // Log whether we found the video
+      if (currentVideo) {
+        debug("Found matching video: " + currentVideo.video_title);
+      } else {
+        debug("No matching video found for ID: " + currentVideoId);
+      }
 
       // If not found or invalid, use the first available video
       if (!currentVideo && allVideosData.length > 0) {
@@ -295,9 +303,13 @@ while ($row = $result_completed_checkpoints->fetch_assoc()) {
       // Update video source and title
       videoSource.src = videoPath;
       currentVideoDisplay.textContent = `Now Playing: ${videoTitle}`;
-
-      // We no longer clear completed checkpoints here
-      // completedCheckpoints = {}; <- This line is removed
+      
+      // Add a debug message to check the video path
+      debug(`Setting video source to: ${videoPath}`);
+      
+      // Clear any previous error state
+      videoPlayer.error = null;
+      
       mcqSection.style.display = "none";
 
       // Update active video in playlist
@@ -311,24 +323,54 @@ while ($row = $result_completed_checkpoints->fetch_assoc()) {
       }
 
       // Important! This loads the new video source
-      videoPlayer.load();
+      try {
+        videoPlayer.load();
+        debug("Video load() called successfully");
+      } catch (error) {
+        debug("Error loading video: " + error.message);
+        showToast("Error loading video. Please try again.");
+      }
 
-      // Add event listener for when video is ready to play
+      // Add event listeners for video loading and errors
       videoPlayer.oncanplay = function() {
         debug("Video can play now");
+        // Try to play the video, but handle autoplay restrictions gracefully
         videoPlayer.play()
           .then(() => {
             debug("Video playback started successfully");
           })
           .catch(error => {
             debug("Error playing video: " + error.message);
-            showToast("Error playing video. Please try again.");
+            // Don't show error toast here, just log it - user can press play manually
+            console.log("Autoplay may be blocked by browser - user can press play manually");
           });
       };
 
       videoPlayer.onerror = function() {
-        debug("Video error: " + videoPlayer.error.code);
-        showToast("Error loading video. Please check file path.");
+        const errorCode = videoPlayer.error ? videoPlayer.error.code : "unknown";
+        debug("Video error: " + errorCode);
+        
+        // More descriptive error message based on error code
+        if (videoPlayer.error) {
+          switch(videoPlayer.error.code) {
+            case 1: // MEDIA_ERR_ABORTED
+              showToast("Video playback aborted. Please try again.");
+              break;
+            case 2: // MEDIA_ERR_NETWORK
+              showToast("Network error. Check your connection and try again.");
+              break;
+            case 3: // MEDIA_ERR_DECODE
+              showToast("Video decoding error. The file may be corrupted.");
+              break;
+            case 4: // MEDIA_ERR_SRC_NOT_SUPPORTED
+              showToast("Video format not supported. Try a different video.");
+              break;
+            default:
+              showToast("Error loading video. Please check file path.");
+          }
+        } else {
+          showToast("Error loading video. Please check file path.");
+        }
       };
     }
 
@@ -363,26 +405,31 @@ while ($row = $result_completed_checkpoints->fetch_assoc()) {
       mcqSection.style.display = "block";
       mcqContent.innerHTML = `<h3>MCQs for Checkpoint</h3>`;
 
-      if (allMcqsData[checkpointId]) {
-        totalQuestions = 0;
-        const questions = [...allMcqsData[checkpointId]]; // Create a copy to shuffle
-        shuffleArray(questions);
-        const limitedMCQs = questions.slice(0, 10);
+      // Get all available MCQs (from all checkpoints)
+      const allAvailableMcqs = [...allMcqsData]; // Create a copy to shuffle
+      
+      // Shuffle all MCQs to randomize selection
+      shuffleArray(allAvailableMcqs);
+      
+      // Select the first 10 MCQs (or fewer if less than 10 are available)
+      currentQuizQuestions = allAvailableMcqs.slice(0, 10);
+      totalQuestions = currentQuizQuestions.length;
+      
+      // Display the selected MCQs
+      currentQuizQuestions.forEach(mcq => {
+        const mcqElement = document.createElement("div");
+        mcqElement.classList.add("mcq");
+        mcqElement.innerHTML = `
+          <h4>${mcq.question}</h4>
+          <label><input type="radio" name="mcq_${checkpointId}_q${mcq.mcq_id}" value="A"> ${mcq.option_a}</label><br>
+          <label><input type="radio" name="mcq_${checkpointId}_q${mcq.mcq_id}" value="B"> ${mcq.option_b}</label><br>
+          <label><input type="radio" name="mcq_${checkpointId}_q${mcq.mcq_id}" value="C"> ${mcq.option_c}</label><br>
+          <label><input type="radio" name="mcq_${checkpointId}_q${mcq.mcq_id}" value="D"> ${mcq.option_d}</label>
+        `;
+        mcqContent.appendChild(mcqElement);
+      });
 
-        limitedMCQs.forEach(mcq => {
-          const mcqElement = document.createElement("div");
-          mcqElement.classList.add("mcq");
-          mcqElement.innerHTML = `
-            <h4>${mcq.question}</h4>
-            <label><input type="radio" name="mcq_${mcq.checkpoint_id}_q${mcq.mcq_id}" value="A"> ${mcq.option_a}</label><br>
-            <label><input type="radio" name="mcq_${mcq.checkpoint_id}_q${mcq.mcq_id}" value="B"> ${mcq.option_b}</label><br>
-            <label><input type="radio" name="mcq_${mcq.checkpoint_id}_q${mcq.mcq_id}" value="C"> ${mcq.option_c}</label><br>
-            <label><input type="radio" name="mcq_${mcq.checkpoint_id}_q${mcq.mcq_id}" value="D"> ${mcq.option_d}</label>
-          `;
-          mcqContent.appendChild(mcqElement);
-          totalQuestions++;
-        });
-
+      if (totalQuestions > 0) {
         submitButton.style.display = "block";
         videoPlayer.pause();
         videoPlayer.controls = false;
@@ -457,7 +504,10 @@ while ($row = $result_completed_checkpoints->fetch_assoc()) {
           if (lockIcon) {
             videoElement.removeChild(lockIcon);
           }
-          videoElement.setAttribute('onclick', `playVideo('${video.video_path}', '${video.video_title}', ${video.video_id})`);
+          // Escape single quotes in video path and title to prevent JS errors
+        const escapedPath = video.video_path.replace(/'/g, "\\'");
+        const escapedTitle = video.video_title.replace(/'/g, "\\'");
+        videoElement.setAttribute('onclick', `playVideo('${escapedPath}', '${escapedTitle}', ${video.video_id})`);
         }
       });
     }
@@ -465,19 +515,18 @@ while ($row = $result_completed_checkpoints->fetch_assoc()) {
     submitButton.addEventListener("click", () => {
       correctAnswers = 0;
 
-      if (allMcqsData[currentCheckpoint]) {
-        allMcqsData[currentCheckpoint].forEach(mcq => {
-          const selectedRadio = document.querySelector(`input[name="mcq_${mcq.checkpoint_id}_q${mcq.mcq_id}"]:checked`);
-          if (selectedRadio) {
-            const selectedAnswer = selectedRadio.value;
-            const correctOption = mcq.correct_option;
+      // Check all the currently displayed questions
+      currentQuizQuestions.forEach(mcq => {
+        const selectedRadio = document.querySelector(`input[name="mcq_${currentCheckpoint}_q${mcq.mcq_id}"]:checked`);
+        if (selectedRadio) {
+          const selectedAnswer = selectedRadio.value;
+          const correctOption = mcq.correct_option;
 
-            if (selectedAnswer === correctOption) {
-              correctAnswers++;
-            }
+          if (selectedAnswer === correctOption) {
+            correctAnswers++;
           }
-        });
-      }
+        }
+      });
 
       const percentage = (correctAnswers / totalQuestions) * 100;
       const resultMessage = `You got ${correctAnswers} out of ${totalQuestions} correct!<br>Score: ${percentage.toFixed(2)}%`;
