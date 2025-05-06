@@ -12,6 +12,10 @@ $stmt->bind_result($fullName);
 $stmt->fetch();
 $stmt->close();
 
+// Suppress developer errors
+error_reporting(0);
+ini_set('display_errors', 0);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $video_title = $_POST['video_title'];
 
@@ -66,7 +70,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $stmt_mcq->execute();
     }
   }
-  echo "Video, checkpoints, and MCQs added successfully!";
+  // Output JavaScript for SweetAlert instead of plain echo
+  echo "<script>
+          document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+              icon: 'success',
+              title: 'Success!',
+              text: 'Video, checkpoints, and MCQs added successfully!',
+              confirmButtonText: 'OK'
+            });
+          });
+        </script>";
 }
 ?>
 
@@ -80,6 +94,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="assets/css/teacher-portals.css">
   <link rel="stylesheet" href="assets/css/upload-course.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Add SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -101,14 +117,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="dashboard-section">
-      <form action="upload-course.php" method="POST" enctype="multipart/form-data">
+      <form action="upload-course.php" method="POST" enctype="multipart/form-data" id="uploadForm">
         <input type="text" name="video_title" placeholder="Video Title" required>
 
         <h3 class="d-inline"> Video</h3>
         <input type="file" name="video" accept="video/*" required>
 
         <h3 class="d-inline"> Thumbnail</h3>
-        <input type="file" name="thumbnail" accept="image/*" required>
+        <input type="file" name="thumbnail" id="thumbnailInput" accept="image/*" required>
 
         <h3>Checkpoints</h3>
         <div id="checkpointContainer">
@@ -147,6 +163,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <script>
     let checkpointCounter = 1;
     let mcqCounter = [1];
+
+    // Thumbnail size validation
+    document.getElementById('thumbnailInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      const maxSizeMB = 5; // Maximum size in MB
+      const maxSizeBytes = maxSizeMB * 1024 * 1024; // Convert MB to bytes
+
+      if (file && file.size > maxSizeBytes) {
+        Swal.fire({
+          icon: 'error',
+          title: 'File Too Large',
+          text: `The thumbnail size is ${Math.round(file.size / (1024 * 1024) * 100) / 100}MB. Please upload a thumbnail smaller than ${maxSizeMB}MB.`,
+          confirmButtonText: 'OK'
+        });
+        event.target.value = ''; // Clear the input
+      }
+    });
 
     document.getElementById('addCheckpoint').addEventListener('click', function() {
       let checkpointHTML = `
